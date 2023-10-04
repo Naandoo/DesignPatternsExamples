@@ -1,8 +1,9 @@
-public class HelicopterHandler : AirportLogistic
+public class HelicopterHandler : AirportVehicleFactory<Helicopter>
 {
-    public override ITransport HandleVehicle()
+    public Helicopter _vehiclePrefab;
+
+    public override Helicopter Create()
     {
-        ITransport vehicleInstance = base.GetVehicle();
-        return vehicleInstance;
+        return _vehiclePrefab;
     }
 }

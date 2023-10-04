@@ -1,10 +1,8 @@
-using UnityEngine;
-
-public class Car : MonoBehaviour, ITransport
+public class Car : Transport
 {
-    public void Travel()
+    public override void Travel()
     {
-        //walk with transform
+        //walk with dotween
         throw new System.NotImplementedException();
     }
 }

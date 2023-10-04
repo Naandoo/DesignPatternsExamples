@@ -1,8 +1,9 @@
-public class BusHandler : AirportLogistic
+public class BusHandler : AirportVehicleFactory<Bus>
 {
-    public override ITransport HandleVehicle()
+    public Bus _vehiclePrefab;
+
+    public override Bus Create()
     {
-        ITransport vehicleInstance = base.GetVehicle();
-        return vehicleInstance;
+        return _vehiclePrefab;
     }
 }

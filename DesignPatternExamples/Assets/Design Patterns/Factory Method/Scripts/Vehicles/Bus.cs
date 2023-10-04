@@ -1,8 +1,6 @@
-using UnityEngine;
-
-public class Bus : MonoBehaviour, ITransport
+public class Bus : Transport
 {
-    public void Travel()
+    public override void Travel()
     {
         //walk with dotween
         throw new System.NotImplementedException();

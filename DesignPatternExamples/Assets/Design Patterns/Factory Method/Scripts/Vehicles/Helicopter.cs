@@ -1,10 +1,8 @@
-using UnityEngine;
-
-public class Helicopter : MonoBehaviour, ITransport
+public class Helicopter : Transport
 {
-    public void Travel()
+    public override void Travel()
     {
-        //walk with rigidbody
+        //fly with dotween
         throw new System.NotImplementedException();
     }
 }

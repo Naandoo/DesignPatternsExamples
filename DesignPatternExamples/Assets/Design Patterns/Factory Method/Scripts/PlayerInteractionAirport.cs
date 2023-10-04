@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class PlayerInteractionAirport : MonoBehaviour
 {
+    [SerializeField] private BusHandler _busHandler;
+    [SerializeField] private CarHandler _carHandler;
+    [SerializeField] private HelicopterHandler _helicopterHandler;
+    [SerializeField] private AirplaneHandler _airplaneHandler;
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -12,18 +17,6 @@ public class PlayerInteractionAirport : MonoBehaviour
 
     private void ShootMouseRaycast()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray))
-        {
-            if (TryGetComponent(out AirportLogistic airportLogistic))
-            {
-                airportLogistic.GetVehicle();
-            }
-            else if (TryGetComponent(out ITransport transport))
-            {
-                transport.Travel();
-            }
-        }
     }
 }

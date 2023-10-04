@@ -1,8 +1,9 @@
-public class AirplaneHandler : AirportLogistic
+public class AirplaneHandler : AirportVehicleFactory<Airplane>
 {
-    public override ITransport HandleVehicle()
+    public Airplane _vehiclePrefab;
+
+    public override Airplane Create()
     {
-        ITransport vehicleInstance = base.GetVehicle();
-        return vehicleInstance;
+        return _vehiclePrefab;
     }
 }

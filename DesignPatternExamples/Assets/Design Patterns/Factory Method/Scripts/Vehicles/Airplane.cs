@@ -1,10 +1,7 @@
-using UnityEngine;
-
-public class Airplane : MonoBehaviour, ITransport
+public class Airplane : Transport, IAirplane
 {
-    public void Travel()
+    public override void Travel()
     {
-        //walk with animator
         throw new System.NotImplementedException();
     }
 }
