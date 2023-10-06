@@ -1,13 +1,7 @@
 using UnityEngine;
 
-public abstract class AirportVehicleFactory<T> : MonoBehaviour where T : Transport
+public abstract class AirportVehicleFactory : MonoBehaviour, IAirportVehicleFactory<Transport>
 {
-    public abstract T Create();
+    public abstract Transport Create();
 }
-
-
-
-
-
-
 

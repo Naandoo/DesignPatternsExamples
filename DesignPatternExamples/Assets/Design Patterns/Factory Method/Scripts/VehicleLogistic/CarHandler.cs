@@ -1,8 +1,8 @@
-public class CarHandler : AirportVehicleFactory<Car>
+public class CarHandler : AirportVehicleFactory
 {
     public Car _vehiclePrefab;
 
-    public override Car Create()
+    public override Transport Create()
     {
         return _vehiclePrefab;
     }

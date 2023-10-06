@@ -1,8 +1,8 @@
-public class HelicopterHandler : AirportVehicleFactory<Helicopter>
+public class HelicopterHandler : AirportVehicleFactory
 {
     public Helicopter _vehiclePrefab;
 
-    public override Helicopter Create()
+    public override Transport Create()
     {
         return _vehiclePrefab;
     }

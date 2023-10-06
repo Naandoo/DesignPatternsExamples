@@ -2,10 +2,7 @@ using UnityEngine;
 
 public class PlayerInteractionAirport : MonoBehaviour
 {
-    [SerializeField] private BusHandler _busHandler;
-    [SerializeField] private CarHandler _carHandler;
-    [SerializeField] private HelicopterHandler _helicopterHandler;
-    [SerializeField] private AirplaneHandler _airplaneHandler;
+    [SerializeField] private AirportSpotsHandler _airportSpotsHandler;
 
     private void Update()
     {
@@ -17,6 +14,30 @@ public class PlayerInteractionAirport : MonoBehaviour
 
     private void ShootMouseRaycast()
     {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Collider collider = Physics.Raycast(ray, out RaycastHit hit) ? hit.collider : null;
 
+
+        if (collider == null) return;
+        InteractWithCollidedObject(collider);
     }
+
+    public void InteractWithCollidedObject(Collider collider)
+    {
+        if (collider.TryGetComponent(out AirportVehicleFactory airportVehicleFactory))
+        {
+            Transport transport = airportVehicleFactory.Create();
+            Vector3 transportPosition = _airportSpotsHandler.GetAvailablePosition(transport);
+
+            if (transportPosition == default) return;
+            Instantiate(transport, transportPosition, transport.transform.rotation);
+        }
+
+        else if (collider.TryGetComponent(out Transport transport))
+        {
+            transport.Travel();
+        }
+    }
+
+
 }
