@@ -1,6 +1,6 @@
 using DG.Tweening;
-using UnityEngine;
-public class Airplane : Transport, IAirplane
+
+public class Airplane : Transport
 {
     public override void Travel()
     {

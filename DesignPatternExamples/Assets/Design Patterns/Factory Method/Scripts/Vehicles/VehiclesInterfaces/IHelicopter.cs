@@ -1,4 +1,0 @@
-public interface IHelicopter : ITransport
-{
-
-}
