@@ -1,37 +1,20 @@
-using System.Collections.Generic;
+using UnityEngine;
 
-public class SpellCheck
+public class SpellCheck : MonoBehaviour
 {
+    [SerializeField] private ChatHandler _chatHandler;
     private IRuleHandler SpecialCharactersHandler = new SpecialCharactersHandlers();
     private IRuleHandler CharactersCountHandler = new CharactersCountHandler();
-    private List<string> sentencesToCheck = new List<string>
-    {
-        "Qual o estado mais perigosó do Brasil?",
-        "Video game mais famoso da empresa Nintendo",
-        "Nome da ciência que estuda os angulos das geometrias",
-    };
-
     private string SpellCheckLog = " ";
 
-    public void Init() => SetOrderOfChain();
+    private void Awake() => SetOrderOfChain();
+    private void SetOrderOfChain() => SpecialCharactersHandler.SetNext(CharactersCountHandler);
 
-    private void SetOrderOfChain()
+    public void VerifySentence(string sentence)
     {
-        SpecialCharactersHandler.SetNext(CharactersCountHandler);
+        AddLog(SpecialCharactersHandler.CheckRuleOnSentence(sentence));
 
-        VerifySentences();
+        _chatHandler.AddChatBallon(SpellCheckLog, CharacterType.SecondCharacter);
     }
-
-    private void VerifySentences()
-    {
-        foreach (string sentence in sentencesToCheck)
-        {
-            AddLog(SpecialCharactersHandler.CheckRuleOnSentence(sentence));
-        }
-
-        UnityEngine.Debug.Log(SpellCheckLog);
-    }
-
     public void AddLog(string Log) => SpellCheckLog += Log;
-
 }
