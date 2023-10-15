@@ -1396,7 +1396,7 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -1504,7 +1504,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 54}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5925131997621106066
 MonoBehaviour:
@@ -2196,7 +2196,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 5925131998220100689}
-  m_TextViewport: {fileID: 0}
+  m_TextViewport: {fileID: 5925131997158871656}
   m_TextComponent: {fileID: 5925131997158871659}
   m_Placeholder: {fileID: 5925131998557246757}
   m_VerticalScrollbar: {fileID: 0}
@@ -2220,18 +2220,6 @@ MonoBehaviour:
       - m_Target: {fileID: 597184218}
         m_TargetAssemblyTypeName: ChatHandler, Assembly-CSharp
         m_MethodName: CheckChatMessage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5925131997421880082}
-        m_TargetAssemblyTypeName: UnityEngine.UI.VerticalLayoutGroup, UnityEngine.UI
-        m_MethodName: CalculateLayoutInputVertical
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
