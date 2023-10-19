@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public interface IStrategy
 {
     string _description { get; }

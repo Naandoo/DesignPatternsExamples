@@ -4,15 +4,15 @@ using System.Collections.Generic;
 
 public class CharacterStatsInterface : MonoBehaviour
 {
-    [SerializeField] private CharacterStatsContext _characterStatsContext;
     [SerializeField] private GameObject _warriorInterfaceObject;
     [SerializeField] private GameObject _ninjaInterfaceObject;
     [SerializeField] private GameObject _archerInterfaceObject;
     [SerializeField] private TMP_Text _descriptionText;
     [SerializeField] private TMP_Text _healthText;
     [SerializeField] private TMP_Text _attackDamageText;
-    [SerializeField] private TMP_Text _attackSpeedText;
+    [SerializeField] private TMP_Text _speedText;
     [SerializeField] private TMP_Text _armorText;
+    private CharacterStatsContext _characterStatsContext = new();
     private List<GameObject> _characterObjects = new List<GameObject>();
 
     private void OnEnable()
@@ -20,8 +20,6 @@ public class CharacterStatsInterface : MonoBehaviour
         _characterObjects.Add(_warriorInterfaceObject);
         _characterObjects.Add(_ninjaInterfaceObject);
         _characterObjects.Add(_archerInterfaceObject);
-
-        EnableChooseCharacterObject(_warriorInterfaceObject);
     }
 
     public void SetStrategy(IStrategy strategy) => _characterStatsContext.SetStrategy(strategy);
@@ -67,7 +65,7 @@ public class CharacterStatsInterface : MonoBehaviour
         _descriptionText.text = characterStats._description;
         _healthText.text = characterStats._health.ToString();
         _attackDamageText.text = characterStats._attackDamage.ToString();
-        _attackSpeedText.text = characterStats._attackSpeed.ToString();
+        _speedText.text = characterStats._attackSpeed.ToString();
         _armorText.text = characterStats._armor.ToString();
     }
 }
