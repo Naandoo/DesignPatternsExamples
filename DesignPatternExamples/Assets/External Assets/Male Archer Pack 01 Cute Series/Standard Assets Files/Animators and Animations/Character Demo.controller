@@ -236,7 +236,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Walk Forward In Place
+  m_Name: Walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -289,7 +289,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Run Forward W Weapons In Place
+  m_Name: Run
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -320,7 +320,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102688827518695458}
-    m_Position: {x: 281.17383, y: -744.58704, z: 0}
+    m_Position: {x: 280, y: -740, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102337000384831068}
     m_Position: {x: 276, y: -1044, z: 0}
@@ -329,7 +329,7 @@ AnimatorStateMachine:
     m_Position: {x: 564, y: -744, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102374914548715840}
-    m_Position: {x: 480, y: -504, z: 0}
+    m_Position: {x: 480, y: -500, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102929521920226840}
     m_Position: {x: 564, y: -1044, z: 0}
