@@ -11,15 +11,19 @@ public class AudioMixerSingleton : MonoBehaviour
 
     private AudioMixerSingleton() { }
 
-    public static AudioMixerSingleton GetInstance()
+    private void Awake()
     {
         if (_instance == null)
         {
-            _instance = new AudioMixerSingleton();
+            _instance = this;
+            DontDestroyOnLoad(this);
         }
-
-        return _instance;
+        else
+        {
+            Destroy(gameObject);
+        }
     }
+    public static AudioMixerSingleton GetInstance() => _instance;
 
     public void Play(AudioClip sound)
     {

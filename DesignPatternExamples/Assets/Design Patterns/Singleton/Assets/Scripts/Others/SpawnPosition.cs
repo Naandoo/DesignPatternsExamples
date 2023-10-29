@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemiesSpawnPosition : MonoBehaviour
+public class SpawnPosition : MonoBehaviour
 {
     [SerializeField] private List<Transform> _spawnPositionsList;
     private Queue<Transform> _spawnPositions = new();
+
+    public List<Transform> positionsList { get => _spawnPositionsList; }
 
     private void Awake()
     {
@@ -14,7 +16,7 @@ public class EnemiesSpawnPosition : MonoBehaviour
         }
     }
 
-    public Transform GetPosition()
+    public Transform GetSpot()
     {
         Transform position = _spawnPositions.Dequeue();
         _spawnPositions.Enqueue(position);
