@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject[] _skins;
     [SerializeField] private float _speed;
     [SerializeField] private AudioClip _deathSound;
+    [SerializeField] private Collider2D _collider2D;
     private Animator _animator;
     private GameObject _currentSkin;
     private bool isDead;
@@ -26,6 +27,8 @@ public class Enemy : MonoBehaviour
 
         _skins[randomSkin].SetActive(true);
         isDead = false;
+        _collider2D.enabled = true;
+
         _animator.Play("Run");
     }
 
@@ -45,6 +48,7 @@ public class Enemy : MonoBehaviour
         AudioMixerSingleton.GetInstance().Play(_deathSound);
         _animator.Play("Dead");
         isDead = true;
+        _collider2D.enabled = false;
         Invoke(nameof(Disable), 2f);
     }
 

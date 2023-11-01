@@ -4,10 +4,11 @@ public class EnemiesSpawn : MonoBehaviour
 {
     [SerializeField] private SpawnPosition _enemiesSpawnPosition;
     [SerializeField] private Enemy _enemy;
-    [SerializeField] private float _minSpawnDelay;
     [SerializeField] private float _maxSpawnDelay;
+    [SerializeField] private float _minSpawnDelay;
     private PoolSystem<Enemy> _poolSystem;
-
+    private float _lastSpawnTime;
+    private float _spawnDelayReduction = 0.2f;
     private void Start()
     {
         _poolSystem = new PoolSystem<Enemy>(_enemy, 10, transform);
@@ -17,7 +18,7 @@ public class EnemiesSpawn : MonoBehaviour
     private void StartSpawnHordeRoutine()
     {
         SpawnEnemy();
-        InvokeRepeating(nameof(SpawnEnemy), 0, GetRandomSpawnDelay());
+        InvokeRepeating(nameof(SpawnEnemy), 0, GetSpawnDelay());
     }
 
     private void SpawnEnemy()
@@ -35,6 +36,12 @@ public class EnemiesSpawn : MonoBehaviour
         enemy.transform.localPosition = _enemiesSpawnPosition.GetSpot().position;
     }
 
-    private float GetRandomSpawnDelay() => Random.Range(_minSpawnDelay, _maxSpawnDelay);
+    private float GetSpawnDelay()
+    {
+        float spawnDelay = Mathf.Clamp(_lastSpawnTime - _spawnDelayReduction, 1, _maxSpawnDelay);
+        if (spawnDelay <= 0) _lastSpawnTime = _maxSpawnDelay;
+
+        return spawnDelay;
+    }
     private float GetRandomAmountOfEnemies() => Random.Range(0, _enemiesSpawnPosition.positionsList.Count);
 }
