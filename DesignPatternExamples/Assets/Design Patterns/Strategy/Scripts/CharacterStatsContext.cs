@@ -7,5 +7,5 @@ public class CharacterStatsContext
             throw new NullReferenceException("Strategy cannot be null!");
         _strategy = strategy;
     }
-    public CharacterStats GetCharacterStats() => _strategy.GetCharacterStats();
+    public CharacterStats GetCharacterStats() => _strategy?.GetCharacterStats();
 }
