@@ -1,23 +1,27 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+namespace Singleton
 {
-    [SerializeField] private float speed;
-    private PoolSystem<Bullet> _poolSystem;
-
-    public void SetPool(PoolSystem<Bullet> poolSystem) => _poolSystem = poolSystem;
-
-    private void Update()
+    public class Bullet : MonoBehaviour
     {
-        transform.Translate(transform.right * speed * Time.deltaTime);
-    }
+        [SerializeField] private float speed;
+        private PoolSystem<Bullet> _poolSystem;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.TryGetComponent(out Enemy enemy))
+        public void SetPool(PoolSystem<Bullet> poolSystem) => _poolSystem = poolSystem;
+
+        private void Update()
         {
-            enemy.Die();
-            _poolSystem.Return(this);
+            transform.Translate(transform.right * speed * Time.deltaTime);
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.TryGetComponent(out Enemy enemy))
+            {
+                enemy.Die();
+                _poolSystem.Return(this);
+            }
         }
     }
+
 }

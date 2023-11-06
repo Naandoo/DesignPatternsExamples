@@ -1,25 +1,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnPosition : MonoBehaviour
+namespace Singleton
 {
-    [SerializeField] private List<Transform> _spawnPositionsList;
-    private Queue<Transform> _spawnPositions = new();
-
-    public List<Transform> positionsList { get => _spawnPositionsList; }
-
-    private void Awake()
+    public class SpawnPosition : MonoBehaviour
     {
-        foreach (Transform position in _spawnPositionsList)
+        [SerializeField] private List<Transform> _spawnPositionsList;
+        private Queue<Transform> _spawnPositions = new();
+
+        public List<Transform> positionsList { get => _spawnPositionsList; }
+
+        private void Awake()
         {
-            _spawnPositions.Enqueue(position);
+            foreach (Transform position in _spawnPositionsList)
+            {
+                _spawnPositions.Enqueue(position);
+            }
         }
-    }
 
-    public Transform GetSpot()
-    {
-        Transform position = _spawnPositions.Dequeue();
-        _spawnPositions.Enqueue(position);
-        return position;
+        public Transform GetSpot()
+        {
+            Transform position = _spawnPositions.Dequeue();
+            _spawnPositions.Enqueue(position);
+            return position;
+        }
     }
 }

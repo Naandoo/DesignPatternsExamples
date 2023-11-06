@@ -1,6 +1,9 @@
-public class AudioHistory
+namespace Singleton
 {
-    public float LastTimePlayed;
-    public float LastTimePlayedOnPitch;
-    public float LastPitchRegistered = 1;
+    public class AudioHistory
+    {
+        public float LastTimePlayed;
+        public float LastTimePlayedOnPitch;
+        public float LastPitchRegistered = 1;
+    }
 }
