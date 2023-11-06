@@ -1,6 +1,6 @@
 public class ConcreteNinjaStrategy : IStrategy
 {
-    public string _description => "A ninja who is a master of stealth and martial arts, but have a fear of heights";
+    public string _description => "A ninja who is a master of stealth and martial arts, but has fear of heights";
 
     public int _health => 55;
 
