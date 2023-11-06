@@ -1,10 +1,6 @@
 public class ConcreteArcherStrategy : IStrategy
 {
-<<<<<<< HEAD
     public string _description => "An archer with the most deadly aim in the world, but only when he is drunk";
-=======
-    public string _description = "A archer with the most deadly aim in the world, but only if he is drunk";
->>>>>>> Strategy
 
     public int _health = 45;
 
