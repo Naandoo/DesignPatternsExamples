@@ -17,7 +17,7 @@ public class CharacterStatsInterface : MonoBehaviour
 
     private void OnEnable()
     {
-        if (_characterObjects.Length > 0)
+        if (_characterObjects.Count > 0)
             return;
         _characterObjects.Add(_warriorInterfaceObject);
         _characterObjects.Add(_ninjaInterfaceObject);

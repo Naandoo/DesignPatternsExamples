@@ -1,9 +1,9 @@
 public interface IStrategy
 {
-    string _description { get; }
-    int _health { get; }
-    int _attackDamage { get; }
-    int _attackSpeed { get; }
-    int _armor { get; }
+    string Description { get; }
+    int Health { get; }
+    int AttackDamage { get; }
+    int AttackSpeed { get; }
+    int Armor { get; }
     CharacterStats GetCharacterStats();
 }
