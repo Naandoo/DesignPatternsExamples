@@ -62,7 +62,7 @@ public class CharacterStatsInterface : MonoBehaviour
 
     public void UpdateCharacterInterface()
     {
-        CharacterStats characterStats = _characterStatsContext.GetCharacterStats();
+        CharacterStats characterStats = _characterStatsContext.GetCharacterStats()!;
 
         _descriptionText.text = characterStats._description;
         _healthText.text = characterStats._health.ToString();
