@@ -17,6 +17,8 @@ public class CharacterStatsInterface : MonoBehaviour
 
     private void OnEnable()
     {
+        if (_characterObjects.Length > 0)
+            return;
         _characterObjects.Add(_warriorInterfaceObject);
         _characterObjects.Add(_ninjaInterfaceObject);
         _characterObjects.Add(_archerInterfaceObject);
@@ -60,7 +62,7 @@ public class CharacterStatsInterface : MonoBehaviour
 
     public void UpdateCharacterInterface()
     {
-        CharacterStats characterStats = _characterStatsContext.GetCharacterStats();
+        CharacterStats characterStats = _characterStatsContext.GetCharacterStats()!;
 
         _descriptionText.text = characterStats._description;
         _healthText.text = characterStats._health.ToString();
