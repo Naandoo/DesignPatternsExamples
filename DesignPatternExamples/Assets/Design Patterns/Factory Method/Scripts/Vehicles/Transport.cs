@@ -1,5 +1,9 @@
 using UnityEngine;
-public abstract class Transport : MonoBehaviour
+
+namespace Factory
 {
-    public abstract void Travel();
+    public abstract class Transport : MonoBehaviour
+    {
+        public abstract void Travel();
+    }
 }

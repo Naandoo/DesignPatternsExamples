@@ -1,7 +1,11 @@
 using UnityEngine;
 
-public abstract class AirportVehicleFactory : MonoBehaviour, IAirportVehicleFactory<Transport>
+namespace Factory
 {
-    public abstract Transport Create();
+    public abstract class AirportVehicleFactory : MonoBehaviour, IAirportVehicleFactory<Transport>
+    {
+        public abstract Transport Create();
+    }
 }
+
 

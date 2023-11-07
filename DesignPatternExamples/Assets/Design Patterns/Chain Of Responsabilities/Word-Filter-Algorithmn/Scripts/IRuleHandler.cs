@@ -1,5 +1,8 @@
-public interface IRuleHandler
+namespace ChainOfResponsabilities
 {
-    IRuleHandler SetNext(IRuleHandler ruleHandler);
-    string CheckRuleOnSentence(string sentence);
+    public interface IRuleHandler
+    {
+        IRuleHandler SetNext(IRuleHandler ruleHandler);
+        string CheckRuleOnSentence(string sentence);
+    }
 }

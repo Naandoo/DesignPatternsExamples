@@ -1,31 +1,34 @@
 using System.Text;
 using System.Text.RegularExpressions;
 
-public class SpecialCharactersHandlers : BaseRuleHandler
+namespace ChainOfResponsabilities
 {
-    readonly string allowedCharactersRegex = @"[a-zA-Z]";
-
-    public override string CheckRuleOnSentence(string sentence)
+    public class SpecialCharactersHandlers : BaseRuleHandler
     {
-        StringBuilder stringBuilder = new();
+        readonly string allowedCharactersRegex = @"[a-zA-Z]";
 
-        foreach (string word in sentence.Split(' '))
+        public override string CheckRuleOnSentence(string sentence)
         {
-            foreach (char character in word)
+            StringBuilder stringBuilder = new();
+
+            foreach (string word in sentence.Split(' '))
             {
-                if (!Regex.IsMatch(character.ToString(), allowedCharactersRegex))
+                foreach (char character in word)
                 {
-                    stringBuilder.Append($"The character ({character}) is a special characters on ({word}) word and isn't valid.");
+                    if (!Regex.IsMatch(character.ToString(), allowedCharactersRegex))
+                    {
+                        stringBuilder.Append($"The character ({character}) is a special characters on ({word}) word and isn't valid.");
+                    }
                 }
             }
-        }
 
-        if (stringBuilder.Length == 0)
-        {
-            stringBuilder.Append($"The sentence ({sentence}) has no special characters.");
-        }
+            if (stringBuilder.Length == 0)
+            {
+                stringBuilder.Append($"The sentence ({sentence}) has no special characters.");
+            }
 
-        string sentenceLog = stringBuilder.ToString() + "\n" + base.CheckRuleOnSentence(sentence);
-        return sentenceLog;
+            string sentenceLog = stringBuilder.ToString() + "\n" + base.CheckRuleOnSentence(sentence);
+            return sentenceLog;
+        }
     }
 }

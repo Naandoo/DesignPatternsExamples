@@ -1,9 +1,12 @@
-public class CarHandler : AirportVehicleFactory
+namespace Factory
 {
-    public Car _vehiclePrefab;
-
-    public override Transport Create()
+    public class CarHandler : AirportVehicleFactory
     {
-        return _vehiclePrefab;
+        public Car _vehiclePrefab;
+
+        public override Transport Create()
+        {
+            return _vehiclePrefab;
+        }
     }
 }
