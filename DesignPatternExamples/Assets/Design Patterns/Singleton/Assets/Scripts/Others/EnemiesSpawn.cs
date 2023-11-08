@@ -13,7 +13,9 @@ namespace Singleton
         private float _spawnDelayReduction = 0.2f;
         private void Start()
         {
-            _poolSystem = new PoolSystem<Enemy>(_enemy, 10, transform);
+            int poolInitialSize = 10;
+
+            _poolSystem = new PoolSystem<Enemy>(_enemy, poolInitialSize, transform);
             StartSpawnHordeRoutine();
         }
 
