@@ -2,32 +2,35 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChatHandler : MonoBehaviour
+namespace ChainOfResponsabilities
 {
-    [SerializeField] private ChatBallonPool _chatBallonPool;
-    [SerializeField] private VerticalLayoutGroup _chatContent;
-    [SerializeField] private TMP_InputField _inputField;
-    [SerializeField] private SpellCheck _spellCheck;
-
-    public void CheckChatMessage()
+    public class ChatHandler : MonoBehaviour
     {
-        string message = _inputField.text.Trim();
+        [SerializeField] private ChatBallonPool _chatBallonPool;
+        [SerializeField] private VerticalLayoutGroup _chatContent;
+        [SerializeField] private TMP_InputField _inputField;
+        [SerializeField] private SpellCheck _spellCheck;
 
-        if (message.Length > 0)
+        public void CheckChatMessage()
         {
-            AddChatBallon(message, CharacterType.ThirdCharacter);
-            _spellCheck.VerifySentence(message);
-            _inputField.text = string.Empty;
+            string message = _inputField.text.Trim();
+
+            if (message.Length > 0)
+            {
+                AddChatBallon(message, CharacterType.ThirdCharacter);
+                _spellCheck.VerifySentence(message);
+                _inputField.text = string.Empty;
+            }
         }
+
+        public void AddChatBallon(string message, CharacterType characterType)
+        {
+            BallonHolder chatBallon = _chatBallonPool.Get(characterType);
+            chatBallon.transform.SetParent(_chatContent.transform);
+            SetBallonMessage(chatBallon, message);
+        }
+
+        private void SetBallonMessage(BallonHolder chatBallon, string message) => chatBallon.BallonText.text = message;
+
     }
-
-    public void AddChatBallon(string message, CharacterType characterType)
-    {
-        BallonHolder chatBallon = _chatBallonPool.Get(characterType);
-        chatBallon.transform.SetParent(_chatContent.transform);
-        SetBallonMessage(chatBallon, message);
-    }
-
-    private void SetBallonMessage(BallonHolder chatBallon, string message) => chatBallon.BallonText.text = message;
-
 }
