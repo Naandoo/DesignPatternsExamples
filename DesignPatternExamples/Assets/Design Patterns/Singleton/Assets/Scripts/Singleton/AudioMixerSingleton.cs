@@ -42,7 +42,8 @@ namespace Singleton
         {
             if (_isMixerEnabled)
             {
-                if (IsSoundUnavailableToPlay(sound)) return;
+                UpdateSoundLastTimePlayed(sound);
+                if (!IsSoundAvailableToPlay(sound)) return;
                 if (PlayPitchIfAvailable(sound)) return;
             }
 
@@ -50,23 +51,23 @@ namespace Singleton
             _audioSource.PlayOneShot(sound);
         }
 
-        private bool IsSoundUnavailableToPlay(AudioClip sound)
+        private bool IsSoundAvailableToPlay(AudioClip sound)
         {
             if (_recordedSounds.ContainsKey(sound))
             {
                 if (Time.time - _recordedSounds[sound].LastTimePlayed < _minimumSoundDelay)
-                {
-                    _recordedSounds[sound].LastTimePlayed = Time.time;
-                    return true;
-                }
-
-                _recordedSounds[sound].LastTimePlayed = Time.time;
+                    return false;
             }
 
+            return true;
+        }
+
+        private void UpdateSoundLastTimePlayed(AudioClip sound)
+        {
+            if (_recordedSounds.ContainsKey(sound))
+                _recordedSounds[sound].LastTimePlayed = Time.time;
             else
                 _recordedSounds.Add(sound, new AudioHistory { LastTimePlayed = Time.time });
-
-            return false;
         }
 
         private bool PlayPitchIfAvailable(AudioClip sound)
