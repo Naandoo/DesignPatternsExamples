@@ -2,23 +2,18 @@ namespace Strategy
 {
     public class ConcreteArcherStrategy : IStrategy
     {
-        private string _description = "An archer with the most deadly aim in the world, but only when he is drunk";
-        private int _health = 45;
-        private int _attackDamage = 50;
-        private int _attackSpeed = 85;
-        private int _armor = 40;
         private CharacterStats _characterStats;
+
+        public string Description { get; } = "An archer with the most deadly aim in the world, but only when he is drunk";
+        public int Health { get; } = 45;
+        public int AttackDamage { get; } = 50;
+        public int AttackSpeed { get; } = 85;
+        public int Armor { get; } = 40;
 
         public ConcreteArcherStrategy()
         {
-            _characterStats = new CharacterStats(_description, _health, _attackDamage, _attackSpeed, _armor);
+            _characterStats = new CharacterStats(Description, Health, AttackDamage, AttackSpeed, Armor);
         }
-
-        public string Description { get => _description; set => _description = value; }
-        public int Health { get => _health; set => _health = value; }
-        public int AttackDamage { get => _attackDamage; set => _attackDamage = value; }
-        public int AttackSpeed { get => _attackSpeed; set => _attackSpeed = value; }
-        public int Armor { get => _armor; set => _armor = value; }
 
         public CharacterStats GetCharacterStats() => _characterStats;
     }

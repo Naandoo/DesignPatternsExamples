@@ -2,23 +2,17 @@ namespace Strategy
 {
     public class ConcreteWarriorStrategy : IStrategy
     {
-        private string _description = "A brave warrior who fights for honor and glory, but have existential crisis about the defeated enemies";
-        private int _health = 85;
-        private int _attackDamage = 80;
-        private int _attackSpeed = 25;
-        private int _armor = 100;
         private CharacterStats _characterStats;
+        public string Description { get; } = "A brave warrior who fights for honor and glory, but have existential crisis about the defeated enemies";
+        public int Health { get; } = 85;
+        public int AttackDamage { get; } = 80;
+        public int AttackSpeed { get; } = 25;
+        public int Armor { get; } = 100;
 
         public ConcreteWarriorStrategy()
         {
-            _characterStats = new CharacterStats(_description, _health, _attackDamage, _attackSpeed, _armor);
+            _characterStats = new CharacterStats(Description, Health, AttackDamage, AttackSpeed, Armor);
         }
-
-        public string Description { get => _description; set => _description = value; }
-        public int Health { get => _health; set => _health = value; }
-        public int AttackDamage { get => _attackDamage; set => _attackDamage = value; }
-        public int AttackSpeed { get => _attackSpeed; set => _attackSpeed = value; }
-        public int Armor { get => _armor; set => _armor = value; }
 
         public CharacterStats GetCharacterStats() => _characterStats;
     }
