@@ -6,6 +6,6 @@ namespace AbstractFactory
     {
         void Eat();
         float SatietyAmount { get; }
-        IAbstractFactory Factory { get; set; }
+        AbstractFactory Factory { get; set; }
     }
 }

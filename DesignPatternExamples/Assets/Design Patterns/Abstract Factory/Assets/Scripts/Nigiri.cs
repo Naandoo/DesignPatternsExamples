@@ -6,7 +6,7 @@ namespace AbstractFactory
     {
         [SerializeField] private float _satietyAmount;
         private Feedback _feedback = new();
-        public IAbstractFactory Factory { get; set; }
+        public AbstractFactory Factory { get; set; }
 
         public void Eat()
         {
