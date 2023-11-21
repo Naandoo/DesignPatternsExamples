@@ -2189,7 +2189,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 435634083}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1528476683}
+        m_TargetAssemblyTypeName: AbstractFactory.MakiFactory, Assembly-CSharp
+        m_MethodName: CreateSushi
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &435634083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2474,7 +2486,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 471093227}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 714615747}
+        m_TargetAssemblyTypeName: AbstractFactory.HotrollFactory, Assembly-CSharp
+        m_MethodName: CreateSushi
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &471093227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4888,7 +4912,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 780889445}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 922947772}
+        m_TargetAssemblyTypeName: AbstractFactory.SashimiFactory, Assembly-CSharp
+        m_MethodName: CreateSushi
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &780889445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5367,7 +5403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d2937affd7b964e8eb0cdcba768aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sashimiPrefab: {fileID: 7884640669089849230, guid: 8507758221961a743bae2fdc68aa087d, type: 3}
+  _hotrollPrefab: {fileID: 7884640669089849230, guid: 8507758221961a743bae2fdc68aa087d, type: 3}
   _poolSize: 20
   _sushiCreationPoint: {fileID: 1079749553}
 --- !u!1001 &943441011
@@ -5801,7 +5837,7 @@ Transform:
   m_GameObject: {fileID: 1079749552}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.005, y: 0.217, z: 0}
+  m_LocalPosition: {x: -0, y: 0.178, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7484,7 +7520,7 @@ Transform:
   m_GameObject: {fileID: 1436221558}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 122.387596, y: -3.8344924, z: -0.43973982}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7620,7 +7656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f791578761fc494f97f85ce35772a95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nigiriPrefab: {fileID: 821558790838670488, guid: 179ffe4045408254d942615413a50979, type: 3}
+  _hotrollPrefab: {fileID: 821558790838670488, guid: 179ffe4045408254d942615413a50979, type: 3}
   _poolSize: 20
   _sushiCreationPoint: {fileID: 1079749553}
 --- !u!1001 &1444448712
@@ -8229,7 +8265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6bd9f6a94c65e044b2b3fdabc182011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _makiPrefab: {fileID: 7440839890154330771, guid: e628264afd883af4c80ad5d4c8214d81, type: 3}
+  _hotrollPrefab: {fileID: 7440839890154330771, guid: e628264afd883af4c80ad5d4c8214d81, type: 3}
   _poolSize: 20
   _sushiCreationPoint: {fileID: 1079749553}
 --- !u!1001 &1544133783
@@ -10322,6 +10358,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 867894452243205638, guid: ccf05b1937bd299429528f84e4b52d41, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1975170664}
+    - targetCorrespondingSourceObject: {fileID: 867894452243205638, guid: ccf05b1937bd299429528f84e4b52d41, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1975170667}
   m_SourcePrefab: {fileID: 100100000, guid: ccf05b1937bd299429528f84e4b52d41, type: 3}
 --- !u!1 &1975170662 stripped
 GameObject:
@@ -10355,6 +10394,33 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6045164803089671685, guid: b970ab6acb67ba94c9677d318fe27521, type: 3}
+--- !u!54 &1975170667
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975170662}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1977681945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11339,7 +11405,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2097246941}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1443857936}
+        m_TargetAssemblyTypeName: AbstractFactory.NigiriFactory, Assembly-CSharp
+        m_MethodName: CreateSushi
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2097246941
 MonoBehaviour:
   m_ObjectHideFlags: 0
