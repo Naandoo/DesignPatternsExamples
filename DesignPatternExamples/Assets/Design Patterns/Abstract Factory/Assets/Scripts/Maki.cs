@@ -1,22 +1,7 @@
-using UnityEngine;
-
 namespace AbstractFactory
 {
-    public class Maki : MonoBehaviour, ISushi
+    public class Maki : ISushi
     {
-        [SerializeField] private float _satietyAmount;
-        private Feedback _feedback = new();
-        public AbstractFactory Factory { get; set; }
-
-        public void Eat()
-        {
-            _feedback.onEatAnimation(transform, onFinishedAnimation: () =>
-            {
-                Factory.PoolSystem.Return(this.gameObject);
-            });
-        }
-
-        public float SatietyAmount => _satietyAmount;
 
     }
 }

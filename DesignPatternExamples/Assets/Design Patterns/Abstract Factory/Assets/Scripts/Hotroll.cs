@@ -1,22 +1,8 @@
-using UnityEngine;
-
 namespace AbstractFactory
 {
-    public class Hotroll : MonoBehaviour, ISushi
+    public class Hotroll : ISushi
     {
-        [SerializeField] private float _satietyAmount;
-        private Feedback _feedback = new();
-        public AbstractFactory Factory { get; set; }
 
-        public void Eat()
-        {
-            _feedback.onEatAnimation(transform, () =>
-            {
-                Factory.PoolSystem.Return(this.gameObject);
-            });
-        }
-
-        public float SatietyAmount => _satietyAmount;
 
     }
 }
