@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _satietyAmount: 10
+  _collider: {fileID: 5290665700574639611}
+  _rigidbody: {fileID: 6339514221705678674}
 --- !u!1001 &1822319919087253360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -173,8 +175,8 @@ Rigidbody:
   m_GameObject: {fileID: 8854564829233637450}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 1.2
-  m_AngularDrag: 1.2
+  m_Drag: 2
+  m_AngularDrag: 2
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
