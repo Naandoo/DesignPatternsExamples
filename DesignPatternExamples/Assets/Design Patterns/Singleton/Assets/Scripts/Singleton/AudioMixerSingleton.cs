@@ -49,21 +49,12 @@ namespace Singleton
                     }
                     _recordedSounds[sound].LastTimePlayed = Time.time;
                 }
-                else
-                {
-                    return;
-                }
+                else return;
 
-                if (PlayPitchIfAvailable(sound))
+                if (IsPitchAvailable(sound))
                 {
                     PlayPitchVariation(sound, _recordedSounds[sound]);
-                    _recordedSounds[sound].LastTimePlayedOnPitch = Time.time;
                     return;
-                }
-                else
-                {
-                    if (!_recordedSounds.ContainsKey(sound))
-                        _recordedSounds.Add(sound, new AudioHistory { LastTimePlayedOnPitch = Time.time });
                 }
             }
 
@@ -84,7 +75,7 @@ namespace Singleton
             else return false;
         }
 
-        private bool PlayPitchIfAvailable(AudioClip sound)
+        private bool IsPitchAvailable(AudioClip sound)
         {
             if (_recordedSounds.ContainsKey(sound))
             {
