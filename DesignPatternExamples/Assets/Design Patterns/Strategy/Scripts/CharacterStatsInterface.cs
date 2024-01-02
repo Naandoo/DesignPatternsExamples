@@ -7,8 +7,8 @@ namespace Strategy
     public class CharacterStatsInterface : MonoBehaviour
     {
         [SerializeField] private GameObject _warriorInterfaceObject;
-        [SerializeField] private GameObject _ninjaInterfaceObject;
-        [SerializeField] private GameObject _archerInterfaceObject;
+        [SerializeField] private GameObject _mageInterfaceObject;
+        [SerializeField] private GameObject _mummyInterfaceObject;
         [SerializeField] private TMP_Text _descriptionText;
         [SerializeField] private TMP_Text _healthText;
         [SerializeField] private TMP_Text _attackDamageText;
@@ -22,8 +22,8 @@ namespace Strategy
             if (_characterObjects.Count > 0)
                 return;
             _characterObjects.Add(_warriorInterfaceObject);
-            _characterObjects.Add(_ninjaInterfaceObject);
-            _characterObjects.Add(_archerInterfaceObject);
+            _characterObjects.Add(_mageInterfaceObject);
+            _characterObjects.Add(_mummyInterfaceObject);
         }
 
         public void SetStrategy(IStrategy strategy) => _characterStatsContext.SetStrategy(strategy);
@@ -36,20 +36,20 @@ namespace Strategy
             EnableChooseCharacterObject(_warriorInterfaceObject);
         }
 
-        public void SetNinjaStrategy()
+        public void SetMageStrategy()
         {
-            _characterStatsContext.SetStrategy(new ConcreteNinjaStrategy());
+            _characterStatsContext.SetStrategy(new ConcreteMageStrategy());
 
             UpdateCharacterInterface();
-            EnableChooseCharacterObject(_ninjaInterfaceObject);
+            EnableChooseCharacterObject(_mageInterfaceObject);
         }
 
-        public void SetArcherStrategy()
+        public void SetMummyStrategy()
         {
-            _characterStatsContext.SetStrategy(new ConcreteArcherStrategy());
+            _characterStatsContext.SetStrategy(new ConcreteMummyStrategy());
 
             UpdateCharacterInterface();
-            EnableChooseCharacterObject(_archerInterfaceObject);
+            EnableChooseCharacterObject(_mummyInterfaceObject);
         }
 
         public void EnableChooseCharacterObject(GameObject chooseCharacterObject)

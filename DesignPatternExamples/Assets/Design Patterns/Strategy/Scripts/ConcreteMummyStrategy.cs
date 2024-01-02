@@ -1,15 +1,15 @@
 namespace Strategy
 {
-    public class ConcreteNinjaStrategy : IStrategy
+    public class ConcreteMummyStrategy : IStrategy
     {
         private CharacterStats _characterStats;
-        public string Description { get; } = "A ninja who is a master of stealth and martial arts, but have a fear of heights";
+        public string Description { get; } = "A mummy who possesses the most infectious dance moves. However, it only unveils its legendary steps when it hears a party beat.";
         public int Health { get; } = 85;
         public int AttackDamage { get; } = 80;
         public int AttackSpeed { get; } = 25;
         public int Armor { get; } = 100;
 
-        public ConcreteNinjaStrategy()
+        public ConcreteMummyStrategy()
         {
             _characterStats = new CharacterStats(Description, Health, AttackDamage, AttackSpeed, Armor);
         }
