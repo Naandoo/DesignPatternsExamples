@@ -1936,11 +1936,11 @@ Transform:
   m_GameObject: {fileID: 354559901}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 16.440783, y: 0, z: -5.76142}
+  m_LocalPosition: {x: -18.641407, y: 0, z: -5.761424}
   m_LocalScale: {x: 1.4296333, y: 1.4296335, z: 1.4296333}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 608490163}
+  m_Father: {fileID: 177278264}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &355146147 stripped
 Transform:
@@ -2355,11 +2355,11 @@ Transform:
   m_GameObject: {fileID: 422833027}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -50.43749, y: 0, z: 17.75605}
+  m_LocalPosition: {x: -15.355305, y: 0, z: 17.75606}
   m_LocalScale: {x: 1.4296333, y: 1.4296335, z: 1.4296333}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 177278264}
+  m_Father: {fileID: 608490163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &425446891 stripped
 Transform:
@@ -5356,7 +5356,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: f6674c1362ba984468bc1e71a2323d66, type: 3}
       propertyPath: m_Name
-      value: Car Factory
+      value: Bus Factory
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6674c1362ba984468bc1e71a2323d66, type: 3}
       propertyPath: m_LocalScale.x
@@ -5415,10 +5415,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 400000, guid: f6674c1362ba984468bc1e71a2323d66, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1030039362}
-    - targetCorrespondingSourceObject: {fileID: 400000, guid: f6674c1362ba984468bc1e71a2323d66, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 422833028}
+      addedObject: {fileID: 354559902}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f6674c1362ba984468bc1e71a2323d66, type: 3}
       insertIndex: -1
@@ -7226,11 +7223,11 @@ Transform:
   m_GameObject: {fileID: 1030039361}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -50.437473, y: 0, z: -5.761427}
+  m_LocalPosition: {x: -15.355291, y: 0, z: -5.761423}
   m_LocalScale: {x: 1.4296333, y: 1.4296335, z: 1.4296333}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 177278264}
+  m_Father: {fileID: 608490163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1030195204
 PrefabInstance:
@@ -10082,7 +10079,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: f6674c1362ba984468bc1e71a2323d66, type: 3}
       propertyPath: m_Name
-      value: Bus Factory (1)
+      value: Car Factory (1)
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6674c1362ba984468bc1e71a2323d66, type: 3}
       propertyPath: m_LocalScale.x
@@ -10141,7 +10138,10 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 400000, guid: f6674c1362ba984468bc1e71a2323d66, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 354559902}
+      addedObject: {fileID: 1030039362}
+    - targetCorrespondingSourceObject: {fileID: 400000, guid: f6674c1362ba984468bc1e71a2323d66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 422833028}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: f6674c1362ba984468bc1e71a2323d66, type: 3}
       insertIndex: -1
