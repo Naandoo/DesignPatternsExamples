@@ -1,0 +1,178 @@
+fileFormatVersion: 2
+guid: c98e3e55370b6eb4baa9896fa03e8926
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Circle.003
+    100004: Cube.007
+    100006: Cube.008
+    100008: Cylinder.027
+    100010: Plane
+    400000: //RootNode
+    400002: Circle.003
+    400004: Cube.007
+    400006: Cube.008
+    400008: Cylinder.027
+    400010: Plane
+    2100000: DarkRed
+    2100002: Brown
+    2100004: DarkBrown
+    2100006: Yellow
+    2100008: Blue
+    2100010: LightGrey
+    2100012: Grey
+    2100014: DarkGrey
+    2100016: LightBrown
+    2100018: White
+    2300000: Circle.003
+    2300002: Cube.007
+    2300004: Cube.008
+    2300006: Cylinder.027
+    2300008: Plane
+    3300000: Circle.003
+    3300002: Cube.007
+    3300004: Cube.008
+    3300006: Cylinder.027
+    3300008: Plane
+    4300000: Cylinder.027
+    4300002: Plane
+    4300004: Cube.007
+    4300006: Cube.008
+    4300008: Circle.003
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue
+    second: {fileID: 2100000, guid: b7e405ce1ece92843a6946fc236cf1f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown
+    second: {fileID: 2100000, guid: cdff1d4fd86e5e04cb1dda34a0333337, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DarkBrown
+    second: {fileID: 2100000, guid: 711560f2dfa60cb49bdbb90c291be014, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DarkGrey
+    second: {fileID: 2100000, guid: a0f4ffbc1d32a8240968025c7f154cf7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DarkRed
+    second: {fileID: 2100000, guid: 66d7e2830448081499deabc55dfe8022, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey
+    second: {fileID: 2100000, guid: 0487f522877908b43a27133ffc74a409, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightBrown
+    second: {fileID: 2100000, guid: 5663de61b7fa45546a1266785e996f95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightGrey
+    second: {fileID: 2100000, guid: 17335d442b26b6f4b988ad0f55d9ab2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: b00a9d5215eaca544a10ccd4b2e8aa10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow
+    second: {fileID: 2100000, guid: 24620a2f936eafd4f9aa143575733c2d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
