@@ -1,9 +1,13 @@
 using System.Collections.Generic;
 
-public interface IAirshipBuilder
+namespace Builder
 {
-    List<IAirshipModule> airshipModules { get; set; }
-    void SetWings();
-    void SetWeapons();
-    Airship GetAirship();
+    public interface IAirshipBuilder
+    {
+        List<IAirshipModule> airshipModules { get; set; }
+        void AddWing();
+        void AddWeapon();
+        Airship GetAirship();
+        void Undo();
+    }
 }

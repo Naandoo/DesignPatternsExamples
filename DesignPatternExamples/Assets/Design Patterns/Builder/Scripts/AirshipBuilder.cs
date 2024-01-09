@@ -1,23 +1,21 @@
+using System;
 using System.Collections.Generic;
 
-public class AirshipBuilder : IAirshipBuilder
+namespace Builder
 {
-    public List<IAirshipModule> airshipModules { get; set; }
-    private float _totalSpeed;
-    private float _totalDamage;
-
-    public Airship GetAirship()
+    public class AirshipBuilder : IAirshipBuilder
     {
-        throw new System.NotImplementedException();
-    }
+        public List<IAirshipModule> airshipModules { get; set; }
+        [NonSerialized] public float _totalSpeed;
+        [NonSerialized] public float _totalDamage;
 
-    public void SetWings()
-    {
-        airshipModules.Add(new AirshipModule(AirshipModuleType.Wings, _totalSpeed));
-    }
+        public Airship GetAirship()
+        {
+            throw new System.NotImplementedException();
+        }
 
-
-    public void SetWeapons()
-    {
+        public void AddWing() => airshipModules.Add(new AirshipWing());
+        public void AddWeapon() => airshipModules.Add(new AirshipWeapon());
+        public void Undo() => airshipModules.RemoveAt(airshipModules.Count - 1);
     }
 }

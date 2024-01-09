@@ -1,5 +1,8 @@
-public interface IAirshipModule
+namespace Builder
 {
-    AirshipModuleType airshipModule { get; set; }
-    float attributeBonus { get; set; }
+    public interface IAirshipModule
+    {
+        AirshipModuleType airshipModule { get; }
+        float attributeBonus { get; }
+    }
 }

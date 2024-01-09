@@ -1,4 +1,7 @@
-public class Airship
+namespace Builder
 {
+    public class Airship
+    {
 
+    }
 }
