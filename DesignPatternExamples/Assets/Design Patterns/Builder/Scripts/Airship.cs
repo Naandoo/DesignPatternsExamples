@@ -1,7 +1,10 @@
+using UnityEngine;
 namespace Builder
 {
-    public class Airship
+    public class Airship : MonoBehaviour
     {
+        [SerializeField] private AirshipBuilder airshipBuilder;
 
+        
     }
 }

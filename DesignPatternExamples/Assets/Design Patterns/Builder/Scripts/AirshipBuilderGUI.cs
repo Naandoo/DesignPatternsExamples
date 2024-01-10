@@ -1,12 +1,22 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 namespace Builder
 {
     public class AirshipBuilderGUI : MonoBehaviour
     {
-        [SerializeField] private AirshipBuilder airshipBuilder;
+        [SerializeField] private Image _attackFillBar;
+        [SerializeField] private Image _speedFillBar;
+        [SerializeField] private AirshipBuilder _airshipBuilder;
 
-        // public void ToggleWing(bool value) => value ? airshipBuilder.AddWing() : airshipBuilder.Undo();
-        // public void ToggleWeapon(bool value) => value ? airshipBuilder.AddWeapon() : airshipBuilder.Undo();
+        public void UpdateUI()
+        {
+            _attackFillBar.fillAmount = _airshipBuilder.totalDamage / 100f;
+            _speedFillBar.fillAmount = _airshipBuilder.totalSpeed / 100f;
+        }
+
+        public void ShowCompletedAirshipMessage()
+        {
+
+        }
     }
 }
