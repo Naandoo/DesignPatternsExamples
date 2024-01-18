@@ -13,7 +13,7 @@ namespace Builder
         [SerializeField] private Image _leftWeaponToggleCheck;
         [SerializeField] Toggle _ToggleRightWeapon;
         [SerializeField] private Image _rightWeaponToggleCheck;
-
+        [SerializeField] private GameObject _completedAirshipMessage;
         private void Start()
         {
             UpdateAttackDamageGUI();
@@ -41,7 +41,11 @@ namespace Builder
 
         public void ShowCompletedAirshipMessage()
         {
-
+            //tween animation to go up by 50 and then return to origin position
+            _completedAirshipMessage.transform.DOMoveY(_completedAirshipMessage.transform.position.y + 275, 1f).SetEase(Ease.OutBack).OnComplete(() =>
+            {
+                _completedAirshipMessage.transform.DOMoveY(_completedAirshipMessage.transform.position.y - 275, 1f).SetEase(Ease.InBack);
+            });
         }
 
         private void CheckSideWeaponsAvailability()

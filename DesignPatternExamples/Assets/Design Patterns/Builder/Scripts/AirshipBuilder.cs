@@ -20,9 +20,23 @@ namespace Builder
         [NonSerialized] public bool hasRightWing;
         private AirshipWeapon _airshipWeapon = new();
         private AirshipWing _airshipWing = new();
-        public Airship GetAirship()
+        private Airship _airship = new();
+
+        public void GetAirship()
         {
-            throw new System.NotImplementedException();
+            UpdateAirshipInfo();
+            _airshipBuilderGUI.ShowCompletedAirshipMessage();
+        }
+
+        private void UpdateAirshipInfo()
+        {
+            _airship.hasLeftWing = hasLeftWing;
+            _airship.hasRightWing = hasRightWing;
+            _airship.hasLeftWeapon = hasLeftWing;
+            _airship.hasRightWeapon = hasRightWing;
+            _airship.hasFrontalWeapon = hasLeftWing;
+            _airship.totalSpeed = totalSpeed;
+            _airship.totalDamage = totalDamage;
         }
 
         public void SetFrontalWeapon(bool state) => ToggleAirshipModule(_airshipWeapon, state, _frontalWeapon);
@@ -35,14 +49,14 @@ namespace Builder
         {
             hasLeftWing = state;
             ToggleAirshipModule(_airshipWing, state, _leftWing);
-            if (!hasLeftWing) SetLeftWeapon(false);
+            if (!hasLeftWing) DeactivateAirshipModule(_airshipWeapon, _leftWeapon);
         }
 
         public void SetRightWing(bool state)
         {
             hasRightWing = state;
             ToggleAirshipModule(_airshipWing, state, _rightWing);
-            if (!hasRightWing) SetRightWeapon(false);
+            if (!hasRightWing) DeactivateAirshipModule(_airshipWeapon, _rightWeapon);
         }
 
         private void ToggleAirshipModule(IAirshipModule airshipModule, bool value, GameObject moduleGameObject)
@@ -73,26 +87,26 @@ namespace Builder
             switch (airshipModule.airshipModule)
             {
                 case AirshipModuleType.Weapon:
-                    UpdateAttackDamage(value);
+                    UpdateAttackDamage(airshipModule, value);
                     break;
                 case AirshipModuleType.Wings:
-                    UpdateSpeed(value);
+                    UpdateSpeed(airshipModule, value);
                     break;
             }
         }
 
-        private void UpdateAttackDamage(bool value)
+        private void UpdateAttackDamage(IAirshipModule airshipModule, bool value)
         {
             if (value) totalDamage += _airshipWeapon.attributeBonus;
             else totalDamage -= _airshipWeapon.attributeBonus;
-            _airshipBuilderGUI.UpdateGUI(_airshipWeapon);
+            _airshipBuilderGUI.UpdateGUI(airshipModule);
         }
 
-        private void UpdateSpeed(bool value)
+        private void UpdateSpeed(IAirshipModule airshipModule, bool value)
         {
             if (value) totalSpeed += _airshipWing.attributeBonus;
             else totalSpeed -= _airshipWing.attributeBonus;
-            _airshipBuilderGUI.UpdateGUI(_airshipWing);
+            _airshipBuilderGUI.UpdateGUI(airshipModule);
         }
     }
 }

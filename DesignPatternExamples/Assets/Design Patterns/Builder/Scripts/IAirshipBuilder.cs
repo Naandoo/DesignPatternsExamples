@@ -10,6 +10,6 @@ namespace Builder
         void SetLeftWeapon(bool value);
         void SetRightWeapon(bool value);
         void SetFrontalWeapon(bool value);
-        Airship GetAirship();
+        void GetAirship();
     }
 }
