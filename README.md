@@ -1,12 +1,12 @@
 # Strategy
-***
+
 Pattern Purpose:
 The strategy pattern provides a solution for algorithms that may expand with the increasing number of systems they handle. It allows the selection of a strategy based on the current needs, isolating each strategy in its own class to eliminate nested code effectively.
 
 My Application:
 I developed a system to manage character information by employing the Character Strategy. By passing the Character Strategy to the handler, all the necessary information is encapsulated within the class through the interface. This approach ensures the implementation of new characters is straightforward, avoiding the creation of nested code and maintaining code clarity.
 
-***
+
 
 # Chain of Responsibility
 Pattern Purpose:
