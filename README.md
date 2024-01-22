@@ -1,10 +1,11 @@
-![image](https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/5f02ef71-e1d2-40b6-97cd-5c6f2a586679)## [Strategy](https://refactoring.guru/pt-br/design-patterns/strategy)
+## [Strategy](https://refactoring.guru/pt-br/design-patterns/strategy)
 
 - The strategy pattern provides a solution for algorithms that may expand with the increasing number of systems they handle. It allows the selection of a strategy based on the current needs, isolating each strategy in its own class to eliminate nested code effectively.
 
 - I developed a system to manage character information by employing the Character Strategy. By passing the Character Strategy to the handler, all the necessary information is encapsulated within the class through the interface. This approach ensures the implementation of new characters is straightforward, avoiding the creation of nested code and maintaining code clarity.
 
-![image](https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/e6dad123-ff40-4472-9ab0-6d511af1ef8f)
+<img src="[https://your-image-url.type](https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/e6dad123-ff40-4472-9ab0-6d511af1ef8f)" width="100" height="100">
+
 ![image](https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/f0876bbe-e0e8-463d-a0e0-620d13c5a43f)
 ![image](https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/c5784d96-74b2-49c2-bed4-f43bf1c04d4f)
 
