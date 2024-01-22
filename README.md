@@ -33,7 +33,4 @@
 - The builder pattern addresses the challenge of creating complex objects by enabling their construction in a structured manner through sequential steps. This can be accomplished either by manually coding each step or by providing a predefined sequence, enhancing readability and expediting the creation process.
 
 - I developed an Airship Builder that systematically integrates the essential components of an airship, allowing the addition of attributes in a step-by-step fashion. The primary objective was to establish a scalable system that operates seamlessly through a graphical user interface (GUI). With this system, creating various airship configurations, including the one mentioned, becomes a straightforward and efficient process.
-
-![image](https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/aec53d75-e9a9-40dc-8ecf-2ba2cce95e3b)
-![image](https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/e625c583-b37c-44c7-9e83-a95ac28e8b7c)
  
