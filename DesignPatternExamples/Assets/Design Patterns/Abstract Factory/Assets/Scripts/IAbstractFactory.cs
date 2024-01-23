@@ -4,7 +4,7 @@ namespace AbstractFactory
 {
     public abstract class AbstractFactory : MonoBehaviour
     {
-        public GameObject _hotrollPrefab;
+        public GameObject _sushiPrefab;
         public int _poolSize;
         public Transform _sushiCreationPoint;
         public PoolSystem<GameObject> _poolSystem;
