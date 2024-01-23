@@ -14,7 +14,8 @@
 
 - I developed an interactive chat for the English Language, designed to filter sentences containing numbers or accents and with the incorrect amount of words. The existing filter incorporates two rules but can be easily scaled to accommodate more than ten, making it a robust solution for handling various scenarios such as password filtering and other similar tasks.
 #
-<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/e086e6f6-37eb-4ac1-9462-f9c1595f77cc" width="700" height="392"/>
+
+<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/5df5884b-9023-45d5-851d-49a361c156dd" width="700" height="392"/>
 <img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/b13cb1c1-4dbd-47f9-bdc6-7321dae62dad" width="700" height="392"/>
 <img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/0d47177e-688e-434c-b3c8-6fba45d7f344" align="center" width="700" height="392"/> 
 
@@ -49,4 +50,4 @@
 - I developed an Airship Builder that systematically integrates the essential components of an airship, allowing the addition of attributes in a step-by-step fashion. The primary objective was to establish a scalable system that operates seamlessly through a graphical user interface (GUI). With this system, creating various airship configurations, including the one mentioned, becomes a straightforward and efficient process.
  #
 <img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/1a2524e4-3448-4ccb-ba0f-858715c33c85" align="center" width="700" height="392"/> 
-<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/b1c99ec6-ec84-4c02-8c79-5e2196ea93e2" align="center" width="700" height="392"/> 
+<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/66f3a711-1576-49b2-abb4-f7ded9003c9c" align="center" width="700" height="392"/> 
