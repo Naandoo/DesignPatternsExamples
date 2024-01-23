@@ -4,9 +4,9 @@
 
 - I developed a system to manage character information by employing the Character Strategy. By passing the Character Strategy to the handler, all the necessary information is encapsulated within the class through the interface. This approach ensures the implementation of new characters is straightforward, avoiding the creation of nested code and maintaining code clarity.
 #
-<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/484b2628-6f07-4960-a15a-39de47896f7f" width="500" height="300"/>
-<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/9d4573aa-1f03-4c36-a1f9-79aa7e2f1338" width="500" height="300"/>
-<p align="center"> <img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/7adafcea-a4d8-47e5-98b6-3a2064efbdc1" align="center" width="500" height="300"/> </p>
+<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/484b2628-6f07-4960-a15a-39de47896f7f" width="300" height="200"/>
+<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/9d4573aa-1f03-4c36-a1f9-79aa7e2f1338" width="300" height="200"/>
+<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/7adafcea-a4d8-47e5-98b6-3a2064efbdc1" align="center" width="300" height="200"/> 
 
 ## [Chain of Responsibility](https://refactoring.guru/pt-br/design-patterns/chain-of-responsibility)
 
