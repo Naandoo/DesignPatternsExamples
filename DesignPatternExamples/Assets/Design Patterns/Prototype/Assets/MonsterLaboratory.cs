@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace Prototype
@@ -10,6 +11,8 @@ namespace Prototype
         [SerializeField] private Monster _originalPrototype;
         [SerializeField] private List<GameObject> _monsterSpawnPoints;
         [SerializeField] private int _monsterInitialPoolSize;
+        [SerializeField] private int amountToIncrement = 5;
+        [SerializeField] private TMP_Text _attackText;
         private WaitForSeconds _spawnDelay = new WaitForSeconds(2f);
         private PoolSystem<Monster> _monsterObjectsPool;
 
@@ -40,8 +43,23 @@ namespace Prototype
             monster.transform.position = _monsterSpawnPoints[Random.Range(0, _monsterSpawnPoints.Count)].transform.position;
         }
 
-        public void IncrementOriginalPrototypeAttack(int amount) => _originalPrototype.MonsterPrototype.AttackDamage += amount;
-        public void DecrementOriginalPrototypeAttack(int amount) => _originalPrototype.MonsterPrototype.AttackDamage -= amount;
+        public void IncrementOriginalPrototypeAttack()
+        {
+            int maxAttackDamage = 50;
+            if (_originalPrototype.MonsterPrototype.AttackDamage < maxAttackDamage)
+            {
+                _originalPrototype.MonsterPrototype.AttackDamage += amountToIncrement;
+                _attackText.text = _originalPrototype.MonsterPrototype.AttackDamage.ToString();
+            }
+        }
+        public void DecrementOriginalPrototypeAttack()
+        {
+            if (_originalPrototype.MonsterPrototype.AttackDamage - amountToIncrement >= 0)
+            {
+                _originalPrototype.MonsterPrototype.AttackDamage -= amountToIncrement;
+                _attackText.text = _originalPrototype.MonsterPrototype.AttackDamage.ToString();
+            }
+        }
     }
 
 }
