@@ -51,3 +51,11 @@
  #
 <img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/1a2524e4-3448-4ccb-ba0f-858715c33c85" align="center" width="700" height="392"/> 
 <img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/66f3a711-1576-49b2-abb4-f7ded9003c9c" align="center" width="700" height="392"/> 
+
+## [Prototype](https://refactoring.guru/pt-br/design-patterns/prototype)
+
+- The prototype pattern is responsible for creating a copy of objects that adhere to their interfaces. This copy includes all the changes that have occurred since the class was originally created. In addition, it provides the opportunity to avoid the need for creating a new class using the 'new' keyword, making it an excellent option for iterating through objects and creating copies when necessary.
+  
+- Thinking about these games where we have the opportunity to control hordes with many attributes, I was able to create a sample where the monsters follow the prototype that the player can interact with by changing their strength. This could be scalable to any other attributes, reflecting the properties of the core prototype throughout the entire horde.
+
+<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/102834fd-f0ac-4a96-a0c8-9380ec498a7a" align="center" width="700" height="392"/> 
