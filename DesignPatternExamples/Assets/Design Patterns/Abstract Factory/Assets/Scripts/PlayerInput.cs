@@ -13,7 +13,7 @@ namespace AbstractFactory
 
                 if (Physics.Raycast(ray, out hit))
                 {
-                    ISushi sushi = hit.collider.GetComponentInParent<ISushi>();
+                    Sushi sushi = hit.collider.GetComponentInParent<Sushi>();
                     if (sushi != null) sushi.Eat();
                 }
             }

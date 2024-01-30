@@ -1,8 +1,9 @@
+using UnityEngine;
+
 namespace AbstractFactory
 {
-    public class Hotroll : ISushi
+    public class Hotroll : Sushi
     {
-
 
     }
 }

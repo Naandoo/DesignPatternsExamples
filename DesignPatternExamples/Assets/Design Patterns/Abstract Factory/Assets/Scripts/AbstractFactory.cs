@@ -7,26 +7,27 @@ namespace AbstractFactory
         public GameObject _sushiPrefab;
         public int _poolSize;
         public Transform _sushiCreationPoint;
-        public PoolSystem<GameObject> _poolSystem;
-        public PoolSystem<GameObject> PoolSystem { get => _poolSystem; }
+        public PoolSystem<GameObject> PoolSystem;
+        private const float _sushiPushForce = 0.75f;
+        private const float _sushiPushForceMultiplier = 100f;
 
         public void CreateSushi()
         {
             GameObject sushi = PoolSystem.Get();
+            IPoolableObject<GameObject> poolableObject = sushi.GetComponent<IPoolableObject<GameObject>>();
+            poolableObject.SetPool(PoolSystem);
+
             sushi.transform.localPosition = _sushiCreationPoint.position;
             AddRandomForce(sushi);
 
-            ISushi iSushi = sushi.GetComponent<ISushi>();
-
-            SetFactory(iSushi);
+            Sushi Sushi = sushi.GetComponent<Sushi>();
         }
-
-        public void SetFactory(ISushi sushi) => sushi.Factory = this;
 
         public void AddRandomForce(GameObject sushi)
         {
             Rigidbody rigidbody = sushi.GetComponentInChildren<Rigidbody>();
-            rigidbody.AddForce(new Vector3(Random.Range(-0.75f, 0.75f), 0f, Random.Range(-0.75f, 0.75f)) * 100f);
+            rigidbody.AddForce(new Vector3(Random.Range(-_sushiPushForce, _sushiPushForce),
+            0f, Random.Range(-_sushiPushForce, _sushiPushForce)) * _sushiPushForceMultiplier);
         }
     }
 }

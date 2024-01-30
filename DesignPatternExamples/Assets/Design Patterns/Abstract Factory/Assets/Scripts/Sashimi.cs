@@ -1,6 +1,8 @@
+using UnityEngine;
+
 namespace AbstractFactory
 {
-    public class Sashimi : ISushi
+    public class Sashimi : Sushi
     {
 
     }

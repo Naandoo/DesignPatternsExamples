@@ -6,7 +6,7 @@ namespace AbstractFactory
 {
     public class Feedback
     {
-        public void onEatAnimation(Transform transform, Action onFinishedAnimation)
+        public void OnEatAnimation(Transform transform, Action onFinishedAnimation)
         {
             transform.DOLocalMoveY(transform.position.y + 0.75f, 0.5f).SetEase(Ease.OutQuad).OnComplete(() =>
             {
