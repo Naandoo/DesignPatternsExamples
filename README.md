@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This project still in development, feel free to add suggestions and feedbacks.
+
 ## [Strategy](https://refactoring.guru/pt-br/design-patterns/strategy)
 
 - The strategy pattern provides a solution for algorithms that may expand with the increasing number of systems they handle. It allows the selection of a strategy based on the current needs, isolating each strategy in its own class to eliminate nested code effectively.
@@ -29,9 +32,11 @@
 
 ## [Factory](https://refactoring.guru/pt-br/design-patterns/factory-method)
 
-- The Abstract Factory facilitates the creation of different variations of the same object in a performant manner, without specifying a concrete class. It allows clients to create objects without knowing the exact class, achieving this by separating each factory into its own class and follow the same interface. This separation enables exclusive interaction between the factory and the object created by it, preventing different classes from returning unrelated objects.
+Pattern Purpose:
+The factory pattern is an incredible solution for managing the creation of various entities that share a common purpose but may exhibit different behaviors. It eliminates the potential for creating nested code, enhancing readability by implementing a system that facilitates the creation of diverse objects adhering to the same interface.
 
-- I implemented an Abstract Factory for sushi, where each type of sushi has its own factory. Clients placing orders don't need to be aware of the specific factory, as the abstract class is passed for interaction. This design choice enhances scalability, enabling the addition of new sushi types to the system without significant effort. 
+My Application:
+I implemented the Factory Pattern by establishing several distinct factories that produce objects adhering to a shared interface. This enables these objects to execute optimal actions based on their properties.
 #
 <img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/ff201fff-04b7-4fee-a980-eb37d846d11a" align="center" width="700" height="392"/> 
 
