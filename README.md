@@ -64,3 +64,12 @@ I implemented the Factory Pattern by establishing several distinct factories tha
 - Thinking about these games where we have the opportunity to control hordes with many attributes, I was able to create a sample where the monsters follow the prototype that the player can interact with by changing their strength. This could be scalable to any other attributes, reflecting the properties of the core prototype throughout the entire horde.
 
 <img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/102834fd-f0ac-4a96-a0c8-9380ec498a7a" align="center" width="700" height="392"/> 
+
+## [Adapter](https://refactoring.guru/pt-br/design-patterns/adapter)
+
+- The Adapter pattern provides a solution to integrate systems with different interfaces that were unable to communicate properly by introducing an Adapter. This Adapter covers one of the systems without revealing its existence to the requesting system. This enables working with different systems that need to interact but face communication barriers.
+
+- The Color Switcher is a system designed to handle RGB values and Hex values for color manipulation within a game. The Adapter comes into play when it creates the capability to convert RGB into Hex code and subsequently into color. This feature proves useful in scenarios where direct manipulation with RGB values is not feasible.
+
+<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/3d8d7a7d-6c91-41fa-a030-378c98cb4134" align="center" width="700" height="392"/> 
+
