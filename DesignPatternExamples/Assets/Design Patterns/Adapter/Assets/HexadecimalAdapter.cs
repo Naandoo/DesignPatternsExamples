@@ -11,6 +11,6 @@ namespace Adapter
             this.hexadecimal = hexadecimal;
         }
 
-        public Color InsertColorValues(float r, float g, float b) => hexadecimal.ConvertRGBToHex(r, g, b);
+        public Color GetColorFromRGBWithAdapter(float r, float g, float b) => hexadecimal.ConvertRGBToHex(r, g, b);
     }
 }

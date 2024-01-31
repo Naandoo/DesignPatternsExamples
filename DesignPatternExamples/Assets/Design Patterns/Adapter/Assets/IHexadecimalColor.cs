@@ -4,6 +4,6 @@ namespace Adapter
 {
     public interface IHexadecimalColor
     {
-        Color ConvertHexToRGB(string hexCode);
+        Color GetColorFromHex(string hexCode);
     }
 }

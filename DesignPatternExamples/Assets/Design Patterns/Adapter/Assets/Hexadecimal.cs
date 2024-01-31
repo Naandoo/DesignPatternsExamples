@@ -4,7 +4,7 @@ namespace Adapter
 {
     public class Hexadecimal : IHexadecimalColor
     {
-        public Color ConvertHexToRGB(string hexCode)
+        public Color GetColorFromHex(string hexCode)
         {
             Color color = new Color();
             ColorUtility.TryParseHtmlString(hexCode, out color);
@@ -14,7 +14,7 @@ namespace Adapter
         public Color ConvertRGBToHex(float r, float g, float b)
         {
             string hexCode = ColorUtility.ToHtmlStringRGB(new Color(r, g, b));
-            return ConvertHexToRGB(hexCode);
+            return GetColorFromHex(hexCode);
         }
     }
 }
