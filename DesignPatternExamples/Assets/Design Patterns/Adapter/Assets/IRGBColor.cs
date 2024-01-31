@@ -4,7 +4,7 @@ namespace Adapter
 {
     public interface IRGBColor
     {
-        Color GetColorFromRGBWithAdapter(float r, float g, float b);
+        Color GetColorFromRGBWithAdapter(int r, int g, int b);
     }
 }
 
