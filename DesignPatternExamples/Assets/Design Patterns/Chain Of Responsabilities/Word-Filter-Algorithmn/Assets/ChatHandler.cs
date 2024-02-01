@@ -27,6 +27,7 @@ namespace ChainOfResponsabilities
         {
             BallonHolder chatBallon = _chatBallonPool.Get(characterType);
             chatBallon.transform.SetParent(_chatContent.transform);
+            chatBallon.transform.localScale = Vector3.one;
             SetBallonMessage(chatBallon, message);
         }
 
