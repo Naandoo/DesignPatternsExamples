@@ -1,26 +1,29 @@
 using System.Text;
 
-public class CharactersCountHandler : BaseRuleHandler
+namespace ChainOfResponsabilities
 {
-    public override string CheckRuleOnSentence(string sentence)
+    public class CharactersCountHandler : BaseRuleHandler
     {
-        StringBuilder stringBuilder = new()
+        public override string CheckRuleOnSentence(string sentence)
         {
-            Capacity = 54
-        };
+            StringBuilder stringBuilder = new()
+            {
+                Capacity = 54
+            };
 
 
-        if (sentence.Length > stringBuilder.Capacity)
-        {
-            stringBuilder.Append($"The sentence ({sentence}) has more than 54 characters.");
+            if (sentence.Length > stringBuilder.Capacity)
+            {
+                stringBuilder.Append($"The sentence ({sentence}) has more than 54 characters.");
+            }
+            else
+            {
+                stringBuilder.Append($"The sentence ({sentence}) has correctly amount of characters.");
+            }
+
+            string sentenceLog = stringBuilder.ToString() + "\n" + base.CheckRuleOnSentence(sentence);
+
+            return sentenceLog;
         }
-        else
-        {
-            stringBuilder.Append($"The sentence ({sentence}) has correctly amount of characters.");
-        }
-
-        string sentenceLog = stringBuilder.ToString() + "\n" + base.CheckRuleOnSentence(sentence);
-
-        return sentenceLog;
     }
 }

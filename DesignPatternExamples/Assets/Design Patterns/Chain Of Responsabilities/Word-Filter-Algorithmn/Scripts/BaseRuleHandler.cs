@@ -1,22 +1,26 @@
-public abstract class BaseRuleHandler : IRuleHandler
+namespace ChainOfResponsabilities
+
 {
-    private IRuleHandler _nextRuleHandler;
-
-    public IRuleHandler SetNext(IRuleHandler ruleHandler)
+    public abstract class BaseRuleHandler : IRuleHandler
     {
-        this._nextRuleHandler = ruleHandler;
-        return ruleHandler;
-    }
+        private IRuleHandler _nextRuleHandler;
 
-    public virtual string CheckRuleOnSentence(string sentence)
-    {
-        if (this._nextRuleHandler != null)
+        public IRuleHandler SetNext(IRuleHandler ruleHandler)
         {
-            return this._nextRuleHandler.CheckRuleOnSentence(sentence);
+            this._nextRuleHandler = ruleHandler;
+            return ruleHandler;
         }
-        else
+
+        public virtual string CheckRuleOnSentence(string sentence)
         {
-            return " ";
+            if (this._nextRuleHandler != null)
+            {
+                return this._nextRuleHandler.CheckRuleOnSentence(sentence);
+            }
+            else
+            {
+                return " ";
+            }
         }
     }
 }

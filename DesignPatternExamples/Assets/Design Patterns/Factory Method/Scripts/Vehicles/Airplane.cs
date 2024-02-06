@@ -1,17 +1,20 @@
 using DG.Tweening;
 
-public class Airplane : Transport
+namespace Factory
 {
-    public override void Travel()
+    public class Airplane : Transport
     {
-        Animate();
-    }
+        public override void Travel()
+        {
+            Animate();
+        }
 
-    private void Animate()
-    {
-        Sequence sequence = DOTween.Sequence();
-        sequence.Append(transform.DOMoveX(transform.position.x - 500, 10f));
-        sequence.Join(transform.DOMoveY(transform.position.y + 20, 10f));
-        sequence.Play();
+        private void Animate()
+        {
+            Sequence sequence = DOTween.Sequence();
+            sequence.Append(transform.DOMoveX(transform.position.x - 500, 10f));
+            sequence.Join(transform.DOMoveY(transform.position.y + 20, 10f));
+            sequence.Play();
+        }
     }
 }
