@@ -5,7 +5,7 @@ namespace Bridge
     public class PlayerInput
     {
         private IPlayableCharacter _character;
-
+        public IPlayableCharacter Character { get => _character; private set => _character = value; }
         public PlayerInput(IPlayableCharacter character)
         {
             _character = character;

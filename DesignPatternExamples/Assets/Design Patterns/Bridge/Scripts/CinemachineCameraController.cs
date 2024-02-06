@@ -7,6 +7,10 @@ namespace Bridge
     {
         [SerializeField] private CinemachineVirtualCamera _cinemachineCamera;
 
-        public void SetTarget(Transform target) => _cinemachineCamera.Follow = target;
+        public void SetTarget(Transform target)
+        {
+            _cinemachineCamera.Follow = target;
+            _cinemachineCamera.LookAt = target;
+        }
     }
 }
