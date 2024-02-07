@@ -22,6 +22,7 @@ namespace Bridge
         public void Move(Vector3 direction)
         {
             _character.Move(direction);
+            SetIdle(false);
         }
 
         public void SetIdle(bool value)

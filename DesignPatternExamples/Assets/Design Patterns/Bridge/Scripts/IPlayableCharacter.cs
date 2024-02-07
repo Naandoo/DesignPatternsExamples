@@ -10,5 +10,6 @@ namespace Bridge
         void Attack();
         void Move(Vector3 direction);
         Transform transform { get; }
+        void ExecuteAnimation(string animationName);
     }
 }

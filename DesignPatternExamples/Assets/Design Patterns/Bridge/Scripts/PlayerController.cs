@@ -36,22 +36,21 @@ namespace Bridge
 
         private void GetMovementInput()
         {
-            if (Input.GetKey(KeyCode.W)) _playerInput.Move(Vector3.forward);
-
-            if (Input.GetKey(KeyCode.S)) _playerInput.Move(Vector3.back);
-
-            if (Input.GetKey(KeyCode.D)) _playerInput.Move(Vector3.right);
-
-            if (Input.GetKey(KeyCode.A)) _playerInput.Move(Vector3.left);
-
-            if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S)
-            || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A))
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
             {
-                _playerInput.SetIdle(true);
+                _playerInput.Move(new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")));
+                _playerInput.SetIdle(false);
             }
+            if (!Input.anyKey) _playerInput.SetIdle(true);
         }
 
-        private void GetAttackInput() => _playerInput.Attack();
+        private void GetAttackInput()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                _playerInput.Attack();
+            }
+        }
 
     }
 }
