@@ -7,6 +7,7 @@ namespace Bridge
     {
         [SerializeField] private Animator _animator;
         [SerializeField] private float _speed;
+        [SerializeField] private float _rotationSpeed;
         public bool Idle { get; private set; }
 
         public virtual bool IsIdle() => Idle;
@@ -29,10 +30,10 @@ namespace Bridge
             if (Idle) ExecuteAnimation("Idle");
         }
 
-        private void Rotate(Vector3 direction)
+        public virtual void Rotate(Vector3 direction)
         {
             Quaternion targetRotation = Quaternion.LookRotation(direction);
-            float rotationSpeed = 5 * Time.deltaTime;
+            float rotationSpeed = _rotationSpeed * Time.deltaTime;
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed);
         }
 
