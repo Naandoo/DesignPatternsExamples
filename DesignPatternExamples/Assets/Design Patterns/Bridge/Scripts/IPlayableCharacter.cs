@@ -8,7 +8,10 @@ namespace Bridge
         bool IsIdle();
         void SetIdle(bool value);
         void Attack();
-        void Move(Vector3 direction);
+        void MoveRight();
+        void MoveLeft();
+        void MoveUp();
+        void MoveDown();
         void ExecuteAnimation(string animationName);
     }
 }

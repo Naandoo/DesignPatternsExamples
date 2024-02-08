@@ -21,7 +21,10 @@ namespace Bridge
 
         public void Move(Vector3 direction)
         {
-            _character.Move(direction);
+            if (direction == Vector3.forward) _character.MoveUp();
+            if (direction == Vector3.back) _character.MoveDown();
+            if (direction == Vector3.left) _character.MoveLeft();
+            if (direction == Vector3.right) _character.MoveRight();
             SetIdle(false);
         }
 
