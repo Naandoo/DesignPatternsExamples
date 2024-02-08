@@ -32,11 +32,9 @@
 
 ## [Factory](https://refactoring.guru/pt-br/design-patterns/factory-method)
 
-Pattern Purpose:
-The factory pattern is an incredible solution for managing the creation of various entities that share a common purpose but may exhibit different behaviors. It eliminates the potential for creating nested code, enhancing readability by implementing a system that facilitates the creation of diverse objects adhering to the same interface.
+- The factory pattern is an incredible solution for managing the creation of various entities that share a common purpose but may exhibit different behaviors. It eliminates the potential for creating nested code, enhancing readability by implementing a system that facilitates the creation of diverse objects adhering to the same interface.
 
-My Application:
-I implemented the Factory Pattern by establishing several distinct factories that produce objects adhering to a shared interface. This enables these objects to execute optimal actions based on their properties.
+- I implemented the Factory Pattern by establishing several distinct factories that produce objects adhering to a shared interface. This enables these objects to execute optimal actions based on their properties.
 #
 <img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/ff201fff-04b7-4fee-a980-eb37d846d11a" align="center" width="700" height="392"/> 
 
