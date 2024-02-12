@@ -32,11 +32,9 @@
 
 ## [Factory](https://refactoring.guru/pt-br/design-patterns/factory-method)
 
-Pattern Purpose:
-The factory pattern is an incredible solution for managing the creation of various entities that share a common purpose but may exhibit different behaviors. It eliminates the potential for creating nested code, enhancing readability by implementing a system that facilitates the creation of diverse objects adhering to the same interface.
+- The factory pattern is an incredible solution for managing the creation of various entities that share a common purpose but may exhibit different behaviors. It eliminates the potential for creating nested code, enhancing readability by implementing a system that facilitates the creation of diverse objects adhering to the same interface.
 
-My Application:
-I implemented the Factory Pattern by establishing several distinct factories that produce objects adhering to a shared interface. This enables these objects to execute optimal actions based on their properties.
+- I implemented the Factory Pattern by establishing several distinct factories that produce objects adhering to a shared interface. This enables these objects to execute optimal actions based on their properties.
 #
 <img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/ff201fff-04b7-4fee-a980-eb37d846d11a" align="center" width="700" height="392"/> 
 
@@ -73,3 +71,10 @@ I implemented the Factory Pattern by establishing several distinct factories tha
 
 <img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/3d8d7a7d-6c91-41fa-a030-378c98cb4134" align="center" width="700" height="392"/> 
 
+## [Bridge](https://refactoring.guru/pt-br/design-patterns/bridge)
+
+- The Bridge pattern is a solution that intends to connect the abstract part of the code with the implementation without coupling them. All the changes needed after the pattern settles are related to the low level, allowing the code to be very sustaintable. Beside of this, it's possible to create a bunch of objects that has the same interface and controll them with the same remote.
+
+- I applied the pattern in the context of character controll, being able to controll all the characters that follow the initial interface and implement them, by doing this,  it's possible to create a bunch of new characters with different properties and action that can be controlled by the player, a solution who's alligned with the Single Responsibility Principe and the Open Closed Principle.
+
+<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/fec599dd-ad79-424f-97b7-bccbe8c8676f" align="center" width="700" height="392"/> 
