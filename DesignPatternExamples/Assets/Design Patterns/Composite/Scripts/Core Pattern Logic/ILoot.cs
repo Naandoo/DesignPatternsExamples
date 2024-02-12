@@ -1,4 +1,3 @@
-
 namespace Composite
 {
     public interface ILoot
