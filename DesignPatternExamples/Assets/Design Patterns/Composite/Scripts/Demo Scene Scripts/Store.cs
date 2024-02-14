@@ -25,9 +25,7 @@ namespace Composite
         {
             if (_currentCoins.Value >= cost.Value)
             {
-                Debug.Log("Purchased");
                 _currentCoins.Value -= cost.Value;
-                Debug.Log("Coins: " + _currentCoins.Value);
                 item.Value++;
             }
         }

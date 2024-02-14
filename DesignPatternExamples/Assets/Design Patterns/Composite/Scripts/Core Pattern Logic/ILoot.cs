@@ -1,7 +1,8 @@
+using UnityEngine;
 namespace Composite
 {
-    public interface ILoot
+    public abstract class ILoot : ScriptableObject
     {
-        int Reclaim();
+        abstract public int Reclaim();
     }
 }

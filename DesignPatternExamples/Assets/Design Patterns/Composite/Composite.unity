@@ -2281,6 +2281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 735932013}
+  - component: {fileID: 735932014}
   m_Layer: 5
   m_Name: Middle Chest Item
   m_TagString: Untagged
@@ -2309,6 +2310,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &735932014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735932012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887e591da1a97f54b95d6eef1dcf0f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _chest: {fileID: 1130774165}
+  _chestAnimator: {fileID: 1130774169}
+  _chestCount: {fileID: 11400000, guid: 3a6119c2994a2244c861fe0e7aa4be3b, type: 2}
+  _chestButton: {fileID: 1130774171}
 --- !u!1 &738015200
 GameObject:
   m_ObjectHideFlags: 0
@@ -3345,10 +3362,10 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 1.6
+    angle: 43.3
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0.05
+    radiusThickness: 0.44
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: -90, y: 0, z: 0}
@@ -3429,7 +3446,7 @@ ParticleSystem:
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 1
     sphericalDirectionAmount: 0
-    randomPositionAmount: 0
+    randomPositionAmount: 1
     radius:
       value: 1.71
       mode: 0
@@ -3550,7 +3567,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -7833,6 +7850,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 735932014}
+        m_TargetAssemblyTypeName: Composite.ChestView, Assembly-CSharp
+        m_MethodName: CheckChestsRemaining
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &873693490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8372,6 +8401,8 @@ GameObject:
   - component: {fileID: 1130774168}
   - component: {fileID: 1130774167}
   - component: {fileID: 1130774169}
+  - component: {fileID: 1130774170}
+  - component: {fileID: 1130774171}
   m_Layer: 5
   m_Name: Chest
   m_TagString: Untagged
@@ -8457,6 +8488,123 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1130774170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130774165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 585c089f34fe5a844b60a8cc5763b387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _totalChests: {fileID: 11400000, guid: 3a6119c2994a2244c861fe0e7aa4be3b, type: 2}
+  _chestList:
+  - {fileID: 11400000, guid: 85f3f608406f4c440b5626e8776ebd97, type: 2}
+  - {fileID: 11400000, guid: d1be059db3938f64a97dac5937a64d35, type: 2}
+  - {fileID: 11400000, guid: e576abf6d6411e041a95d013f061272f, type: 2}
+  _chestAnimator: {fileID: 1130774169}
+  _particleBurst: {fileID: 974937833}
+  _onStartedChestOpen:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 735932014}
+        m_TargetAssemblyTypeName: Composite.ChestView, Assembly-CSharp
+        m_MethodName: ToggleChestButton
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onFinishedChestOpen:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 735932014}
+        m_TargetAssemblyTypeName: Composite.ChestView, Assembly-CSharp
+        m_MethodName: DisableCurrentChest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 735932014}
+        m_TargetAssemblyTypeName: Composite.ChestView, Assembly-CSharp
+        m_MethodName: CheckChestsRemaining
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1130774171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130774165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1130774167}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1130774170}
+        m_TargetAssemblyTypeName: Composite.ChestReward, Assembly-CSharp
+        m_MethodName: OpenChest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1200432104
 GameObject:
   m_ObjectHideFlags: 0

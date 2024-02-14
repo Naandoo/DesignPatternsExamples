@@ -26,18 +26,6 @@ namespace Composite
             _particleSystems.Add(newParticleSystem);
         }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                BurstChests(10);
-            }
-            if (Input.GetKeyDown(KeyCode.V))
-            {
-                BurstCoins(10);
-            }
-        }
-
         public void BurstCoins(int ParticleAmount) => Burst(ParticleAmount, _coinTexture);
         public void BurstChests(int ParticleAmount) => Burst(ParticleAmount, _chestTexture);
 
