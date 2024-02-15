@@ -2,21 +2,24 @@ using UnityEngine;
 using ScriptableVariable;
 using UnityEngine.UI;
 
-public class PurchaseButtonValidate : MonoBehaviour
+namespace Composite
 {
-    [SerializeField] private IntVariable _purchaseItemCost;
-    [SerializeField] private IntVariable _currentCoins;
-    [SerializeField] private Button _purchaseButton;
-
-    private void OnEnable()
+    public class PurchaseButtonValidate : MonoBehaviour
     {
-        _currentCoins.OnValueChanged += ValidateButton;
-        ValidateButton(_currentCoins.Value);
-    }
-    private void OnDisable() => _currentCoins.OnValueChanged -= ValidateButton;
+        [SerializeField] private IntVariable _purchaseItemCost;
+        [SerializeField] private IntVariable _currentCoins;
+        [SerializeField] private Button _purchaseButton;
 
-    public void ValidateButton(int currentCoins)
-    {
-        _purchaseButton.interactable = currentCoins >= _purchaseItemCost.Value;
+        private void OnEnable()
+        {
+            _currentCoins.OnValueChanged += ValidateButton;
+            ValidateButton(_currentCoins.Value);
+        }
+        private void OnDisable() => _currentCoins.OnValueChanged -= ValidateButton;
+
+        public void ValidateButton(int currentCoins)
+        {
+            _purchaseButton.interactable = currentCoins >= _purchaseItemCost.Value;
+        }
     }
 }
