@@ -1,4 +1,3 @@
-using ScriptableVariable;
 using UnityEngine;
 
 namespace Composite
