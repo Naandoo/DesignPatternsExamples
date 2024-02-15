@@ -78,3 +78,12 @@
 - I applied the pattern in the context of character controll, being able to controll all the characters that follow the initial interface and implement them, by doing this,  it's possible to create a bunch of new characters with different properties and action that can be controlled by the player, a solution who's alligned with the Single Responsibility Principe and the Open Closed Principle.
 
 <img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/fec599dd-ad79-424f-97b7-bccbe8c8676f" align="center" width="700" height="392"/> 
+
+## [Composite](https://refactoring.guru/pt-br/design-patterns/composite)
+
+- The composite pattern provides a solution to systems that are similar to trees, composed by objects which may lead to other ones having different executions or none at all. That being said, the pattern provides a solution based on a recursive method that will traverse all the objects in this hierarchy, executing their methods. It is used to combine values, imagine a box that has other items inside, including other boxes with more items. It's possible to work with all of them if they're all using the same interface. 
+
+- I created a loot box system, that are composed of chests who may have coins and other chests inside, so when the player opens the chest, we're able to quickly iterate through all the rewards and return the result of the coins earned. Besides this, I used a scriptable system, aiming to create an accessible system creation to non developers. That being said, the coins can be used to upgrade attributes, so try your luck! 
+
+<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/9c4489f3-e1a6-4ebf-8922-f505f0382cf4" align="center" width="700" height="392"/> 
+<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/3bec0764-237c-4694-9e95-d7a0270bfa2f" align="center" width="700" height="392"/> 
