@@ -6,13 +6,11 @@ namespace Decorator
     public class FoodImplementation : Food
     {
         [SerializeField] private Sprite _icon;
-        [SerializeField] private string _name;
-        [SerializeField] private double _cost;
+        [SerializeField] private int _cost;
+        [SerializeField] private InventoryObject _inventoryObject;
 
         public override Sprite Icon { get => _icon; set => _icon = value; }
-        public override string Name { get => _name; set => _name = value; }
-        public override double Cost { get => _cost; set => _cost = value; }
-
-        public override double GetCost() => Cost;
+        public override int Cost { get => _cost; set => _cost = value; }
+        public override InventoryObject InventoryObject { get => _inventoryObject; set => _inventoryObject = value; }
     }
 }

@@ -4,6 +4,6 @@ namespace Decorator
 {
     public abstract class FoodDecorator : Food
     {
-        abstract protected Food _food { get; set; }
+        abstract protected Food Food { get; set; }
     }
 }
