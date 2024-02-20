@@ -16,14 +16,16 @@ namespace Decorator
             _inventory.SetInventoryGUI(this);
         }
 
-        public void AddInventoryObject(Food food)
+        public void Add(Food food)
         {
-            InventoryObject inventoryObject = _inventoryObjectsPool.Get();
-            inventoryObject.SetObject(food);
+            InventoryObject newInventoryObject = _inventoryObjectsPool.Get();
+            food.InventoryObject = newInventoryObject;
+            newInventoryObject.InitObject(food);
         }
 
-        public void RemoveInventoryObject(InventoryObject inventoryObject)
+        public void Remove(Food food)
         {
+            InventoryObject inventoryObject = food.InventoryObject;
             _inventoryObjectsPool.Return(inventoryObject);
         }
     }

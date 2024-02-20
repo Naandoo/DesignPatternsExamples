@@ -1,14 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 using ScriptableVariable;
-
+using TMPro;
+using DG.Tweening;
 namespace Decorator
 {
     public class FoodGUI : MonoBehaviour
     {
         [SerializeField] private FoodStore _foodStore;
         [SerializeField] private Image _foodIcon;
-        [SerializeField] private Text _foodPrice;
+        [SerializeField] private TMP_Text _foodPrice;
         [SerializeField] private Selectable _foodButton;
         [SerializeField] private IntVariable _moneyAmount;
         [SerializeField] private Inventory _inventory;
@@ -21,13 +22,12 @@ namespace Decorator
 
         public void ToggleObjectInteraction(bool value) => _foodButton.interactable = value;
 
-        public void OnFoodButtonClicked()
+        public void ClickedObjectAnimation()
         {
-            if (_foodStore.Food.CheckAvailability(_moneyAmount.Value))
-            {
-                _moneyAmount.Value -= (int)_foodStore.Food.Cost;
-                _inventory.Add(_foodStore.Food.InventoryObject);
-            }
+            float animationDuration = 0.1f;
+
+            _foodButton.image.DOColor(Color.gray, animationDuration)
+            .OnComplete(() => _foodButton.image.DOColor(Color.white, animationDuration));
         }
     }
 }

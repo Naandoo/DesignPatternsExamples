@@ -651,6 +651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6722481766593836793, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
+      propertyPath: Food
+      value: 
+      objectReference: {fileID: 11400000, guid: 399d6d4994d31bc4b921b1d55719a1f0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7166568660805238499, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
@@ -1146,6 +1150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item
       objectReference: {fileID: 0}
+    - target: {fileID: 6722481766593836793, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
+      propertyPath: Food
+      value: 
+      objectReference: {fileID: 11400000, guid: 482ca75490d4a21409663b0624bc62cc, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1641,6 +1649,7 @@ GameObject:
   - component: {fileID: 724212144}
   - component: {fileID: 724212146}
   - component: {fileID: 724212145}
+  - component: {fileID: 724212147}
   m_Layer: 5
   m_Name: Money Amount
   m_TagString: Untagged
@@ -1764,6 +1773,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724212143}
   m_CullTransparentMesh: 1
+--- !u!114 &724212147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724212143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7449e4ee472061f4689a6822d80ad53e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 724212145}
+  _variable: {fileID: 11400000, guid: 4e6edd4b60544a145b244185f250bc60, type: 2}
 --- !u!1 &741064717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,6 +2005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6722481766593836793, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
+      propertyPath: Food
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a5f558ee4488104186218d33eeb5113, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2300,6 +2327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6722481766593836793, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
+      propertyPath: Food
+      value: 
+      objectReference: {fileID: 11400000, guid: 405bf46df09d8ee48b5461783b299e9e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7166568660805238499, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
@@ -2571,6 +2602,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item
       objectReference: {fileID: 0}
+    - target: {fileID: 6722481766593836793, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
+      propertyPath: Food
+      value: 
+      objectReference: {fileID: 11400000, guid: b55e081dcf75cd144bdcdb5942faf09c, type: 2}
+    - target: {fileID: 8606871424862871176, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606871424862871176, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8606871424862871176, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2741,6 +2788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6722481766593836793, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
+      propertyPath: Food
+      value: 
+      objectReference: {fileID: 11400000, guid: e35815a619046d8458ea588641da56ad, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2937,6 +2988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6722481766593836793, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
+      propertyPath: Food
+      value: 
+      objectReference: {fileID: 11400000, guid: 33c4345c5d0fe04438d07a571b53de44, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3024,53 +3079,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569965922}
   m_CullTransparentMesh: 1
---- !u!1 &1573744939
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1573744941}
-  - component: {fileID: 1573744940}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1573744940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573744939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b1214316059cb54186dae94e4211455, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inventoryObject: {fileID: 0}
-  _inventoryParent: {fileID: 0}
-  _inventory: {fileID: 0}
---- !u!4 &1573744941
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573744939}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 182.05278, y: 614.49896, z: -0.696331}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1639339398
 GameObject:
   m_ObjectHideFlags: 0
@@ -3271,6 +3279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6722481766593836793, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
+      propertyPath: Food
+      value: 
+      objectReference: {fileID: 11400000, guid: bc94aed89ffb76f45957575ba01e6555, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7166568660805238499, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
@@ -3581,6 +3593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1817857353}
   - component: {fileID: 1817857354}
+  - component: {fileID: 1817857355}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -3618,6 +3631,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817857352}
   m_CullTransparentMesh: 1
+--- !u!114 &1817857355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817857352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1214316059cb54186dae94e4211455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inventoryObject: {fileID: 2691433713714112787, guid: 423f7cd848d0f014a967950c2b507fb4, type: 3}
+  _inventoryParent: {fileID: 193762971}
+  _inventory: {fileID: 11400000, guid: 46a355cf2ba7b964c8bc19f190a1350b, type: 2}
 --- !u!1 &1972194324
 GameObject:
   m_ObjectHideFlags: 0
@@ -3891,6 +3919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item
       objectReference: {fileID: 0}
+    - target: {fileID: 6722481766593836793, guid: 48a3177273567f044a4ed5b48455bf67, type: 3}
+      propertyPath: Food
+      value: 
+      objectReference: {fileID: 11400000, guid: a193581eaab95824285e07cb75af3fbf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3909,4 +3941,3 @@ SceneRoots:
   - {fileID: 1300179283}
   - {fileID: 932593192}
   - {fileID: 1181976956}
-  - {fileID: 1573744941}

@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aac9a6f1d2259654cacfc8bf2973764a, type: 3}
-  m_Name: Food 1
+  m_Script: {fileID: 11500000, guid: 919f28cce56fcb744bf55e230fb45b89, type: 3}
+  m_Name: Money Amount
   m_EditorClassIdentifier: 
-  _icon: {fileID: 0}
-  _name: 
-  _cost: 0
-  _Food: {fileID: 0}
-  inventory: {fileID: 0}
-  _inventoryObject: {fileID: 0}
+  _value: 50
+  _initialValue: 5000
+  _resetOn: 0

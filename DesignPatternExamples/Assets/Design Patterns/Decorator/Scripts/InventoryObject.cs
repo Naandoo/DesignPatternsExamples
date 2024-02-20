@@ -1,21 +1,36 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
+using ScriptableVariable;
+
 namespace Decorator
 {
-    public class InventoryObject : MonoBehaviour
+    public class InventoryObject : MonoBehaviour, IPointerDownHandler
     {
         [SerializeField] private Image _icon;
         [SerializeField] private TMP_Text _cost;
-        [SerializeField] private Button _button;
+        [SerializeField] private float _increaseCostPercentage = 1.35f;
+        [SerializeField] private Inventory _inventory;
+        [SerializeField] private IntVariable _moneyAmount;
         private Food _food;
-        public Food Food { get => _food; }
-
-        public void SetObject(Food food)
+        private int _costToSell;
+        public void InitObject(Food food)
         {
             _food = food;
             _icon.sprite = food.Icon;
-            _cost.text = food.Cost.ToString();
+
+            _costToSell = (int)(food.Cost * _increaseCostPercentage);
+            _cost.text = _costToSell.ToString();
         }
+
+        public void OnPointerDown(PointerEventData eventData) => SellFood();
+
+        private void SellFood()
+        {
+            _inventory.InventoryRemove(_food);
+            _moneyAmount.Value += _costToSell;
+        }
+
     }
 }

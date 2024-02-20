@@ -8,33 +8,32 @@ namespace Decorator
     public class Inventory : ScriptableObject
     {
         private InventoryGUI _inventoryGUI;
-        private Dictionary<Food, int> _foodInventory = new();
+        private Dictionary<Food, int> _inventoryFoods = new();
         public event Action OnInventoryChanged;
 
         public void SetInventoryGUI(InventoryGUI inventoryGUI) => _inventoryGUI = inventoryGUI;
-        public void Add(InventoryObject inventoryObject)
-        {
-            Food food = inventoryObject.Food;
-            if (_foodInventory.ContainsKey(food)) _foodInventory[food]++;
-            else _foodInventory.Add(food, 1);
 
-            _inventoryGUI.AddInventoryObject(food);
+        public void InventoryAdd(Food food)
+        {
+            if (_inventoryFoods.ContainsKey(food)) _inventoryFoods[food]++;
+            else _inventoryFoods.Add(food, 1);
+
+            _inventoryGUI.Add(food);
             OnInventoryChanged?.Invoke();
         }
 
-        public void Remove(InventoryObject inventoryObject)
+        public void InventoryRemove(Food food)
         {
-            Food food = inventoryObject.Food;
-            if (_foodInventory.ContainsKey(food))
+            if (Contains(food))
             {
-                _foodInventory[food]--;
-                if (_foodInventory[food] <= 0) _foodInventory.Remove(food);
-            }
+                if (_inventoryFoods[food] >= 1) _inventoryFoods[food]--;
+                if (_inventoryFoods[food] == 0) _inventoryFoods.Remove(food);
 
-            _inventoryGUI.RemoveInventoryObject(inventoryObject);
-            OnInventoryChanged?.Invoke();
+                _inventoryGUI.Remove(food);
+                OnInventoryChanged?.Invoke();
+            }
         }
 
-        public bool Contains(Food food) => _foodInventory.ContainsKey(food);
+        public bool Contains(Food food) => _inventoryFoods.ContainsKey(food);
     }
 }
