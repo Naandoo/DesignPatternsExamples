@@ -22,14 +22,14 @@ namespace Decorator
             OnInventoryChanged?.Invoke();
         }
 
-        public void InventoryRemove(Food food)
+        public void InventoryRemove(Food food, InventoryObject inventoryObject)
         {
             if (Contains(food))
             {
                 if (_inventoryFoods[food] >= 1) _inventoryFoods[food]--;
                 if (_inventoryFoods[food] == 0) _inventoryFoods.Remove(food);
 
-                _inventoryGUI.Remove(food);
+                _inventoryGUI.Remove(inventoryObject);
                 OnInventoryChanged?.Invoke();
             }
         }

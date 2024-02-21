@@ -24,11 +24,11 @@ namespace Decorator
             _cost.text = _costToSell.ToString();
         }
 
-        public void OnPointerDown(PointerEventData eventData) => SellFood();
+        public void OnPointerDown(PointerEventData eventData) => SellFood(this);
 
-        private void SellFood()
+        private void SellFood(InventoryObject inventoryObject)
         {
-            _inventory.InventoryRemove(_food);
+            _inventory.InventoryRemove(_food, inventoryObject);
             _moneyAmount.Value += _costToSell;
         }
 

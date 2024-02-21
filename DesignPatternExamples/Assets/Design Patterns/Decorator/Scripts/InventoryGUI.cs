@@ -23,9 +23,8 @@ namespace Decorator
             newInventoryObject.InitObject(food);
         }
 
-        public void Remove(Food food)
+        public void Remove(InventoryObject inventoryObject)
         {
-            InventoryObject inventoryObject = food.InventoryObject;
             _inventoryObjectsPool.Return(inventoryObject);
         }
     }
