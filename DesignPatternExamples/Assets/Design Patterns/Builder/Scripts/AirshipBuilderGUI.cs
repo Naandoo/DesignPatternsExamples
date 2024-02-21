@@ -14,37 +14,46 @@ namespace Builder
         [SerializeField] Toggle _ToggleRightWeapon;
         [SerializeField] private Image _rightWeaponToggleCheck;
         [SerializeField] private GameObject _completedAirshipMessage;
+        private Vector3 _completedAirshipMessageInitialPosition;
+
         private void Start()
         {
             UpdateAttackDamageGUI();
             UpdateSpeedGUI();
+
+            _completedAirshipMessageInitialPosition = _completedAirshipMessage.transform.position;
         }
 
-        public void UpdateGUI(IAirshipModule airshipModule)
+        public void UpdateAttackDamageGUI()
         {
-            switch (airshipModule.airshipModule)
-            {
-                case AirshipModuleType.Weapon:
-                    UpdateAttackDamageGUI();
-                    break;
-                case AirshipModuleType.Wings:
-                    UpdateSpeedGUI();
-                    break;
-            }
-
+            float duration = 0.5f;
+            _attackFillBar.DOFillAmount(_airshipBuilder.TotalDamage / 100f, duration);
             CheckSideWeaponsAvailability();
         }
 
-        private void UpdateAttackDamageGUI() => _attackFillBar.DOFillAmount(_airshipBuilder.totalDamage / 100f, 0.5f);
-
-        private void UpdateSpeedGUI() => _speedFillBar.DOFillAmount(_airshipBuilder.totalSpeed / 100f, 0.5f);
+        public void UpdateSpeedGUI()
+        {
+            float duration = 0.5f;
+            _speedFillBar.DOFillAmount(_airshipBuilder.TotalSpeed / 100f, duration);
+            CheckSideWeaponsAvailability();
+        }
 
         public void ShowCompletedAirshipMessage()
         {
-            //tween animation to go up by 50 and then return to origin position
-            _completedAirshipMessage.transform.DOMoveY(_completedAirshipMessage.transform.position.y + 275, 1f).SetEase(Ease.OutBack).OnComplete(() =>
+            if (_completedAirshipMessage.transform.position != _completedAirshipMessageInitialPosition)
+                return;
+
+            float movementAmount = 275;
+            float duration = 1f;
+
+            _completedAirshipMessage.transform
+            .DOMoveY(_completedAirshipMessageInitialPosition.y + movementAmount, duration)
+            .SetEase(Ease.OutBack)
+            .OnComplete(() =>
             {
-                _completedAirshipMessage.transform.DOMoveY(_completedAirshipMessage.transform.position.y - 275, 1f).SetEase(Ease.InBack);
+                _completedAirshipMessage.transform
+                .DOMoveY(_completedAirshipMessage.transform.position.y - movementAmount, duration)
+                .SetEase(Ease.InBack);
             });
         }
 

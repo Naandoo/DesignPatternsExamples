@@ -1239,7 +1239,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1223355049}
         m_TargetAssemblyTypeName: Builder.AirshipBuilder, Assembly-CSharp
-        m_MethodName: SetRightWing
+        m_MethodName: SetRightWingActive
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1419,7 +1419,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1223355049}
         m_TargetAssemblyTypeName: Builder.AirshipBuilder, Assembly-CSharp
-        m_MethodName: SetLeftWing
+        m_MethodName: SetLeftWingActive
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1515,7 +1515,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1223355049}
         m_TargetAssemblyTypeName: Builder.AirshipBuilder, Assembly-CSharp
-        m_MethodName: GetAirship
+        m_MethodName: OnAirshipCompleted
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2785,7 +2785,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1223355049}
         m_TargetAssemblyTypeName: Builder.AirshipBuilder, Assembly-CSharp
-        m_MethodName: SetFrontalWeapon
+        m_MethodName: SetFrontalWeaponActive
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2860,7 +2860,51 @@ MonoBehaviour:
   _rightWeapon: {fileID: 5055131467425477127}
   _leftWing: {fileID: 2543461380321613105}
   _rightWing: {fileID: 1878890904440470913}
-  _airshipBuilderGUI: {fileID: 191853293}
+  _OnAirshipDamageChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 191853293}
+        m_TargetAssemblyTypeName: Builder.AirshipBuilderGUI, Assembly-CSharp
+        m_MethodName: UpdateAttackDamageGUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _OnAirshipSpeedChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 191853293}
+        m_TargetAssemblyTypeName: Builder.AirshipBuilderGUI, Assembly-CSharp
+        m_MethodName: UpdateSpeedGUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onAirshipCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 191853293}
+        m_TargetAssemblyTypeName: Builder.AirshipBuilderGUI, Assembly-CSharp
+        m_MethodName: ShowCompletedAirshipMessage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1223355050
 Transform:
   m_ObjectHideFlags: 0
@@ -3629,7 +3673,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1223355049}
         m_TargetAssemblyTypeName: Builder.AirshipBuilder, Assembly-CSharp
-        m_MethodName: SetRightWeapon
+        m_MethodName: SetRightWeaponActive
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4264,7 +4308,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1223355049}
         m_TargetAssemblyTypeName: Builder.AirshipBuilder, Assembly-CSharp
-        m_MethodName: SetLeftWeapon
+        m_MethodName: SetLeftWeaponActive
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
