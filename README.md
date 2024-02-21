@@ -87,3 +87,12 @@
 
 <img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/9c4489f3-e1a6-4ebf-8922-f505f0382cf4" align="center" width="700" height="392"/> 
 <img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/3bec0764-237c-4694-9e95-d7a0270bfa2f" align="center" width="700" height="392"/> 
+
+# [Decorator](https://refactoring.guru/pt-br/design-patterns/decorator)
+
+- The Decorator pattern solves the problem of scalability in code in an elegant way. By avoiding the creation of subclasses that would quickly result in nested code, this is achievable because the core system maintains the protection of its logic and only scales the system. This allows for the creation of new objects with the same characteristics without requiring changes to the less abstract parts of the code. We are able to dynamically assign new responsibilities to a family of objects without changing the core system.
+
+- Thinking about this description, I created a system that enables the purchase of items in the shop and stores them in the inventory. The family of items that can be stored has different properties that enable purchasing and increase their costs when selling, thus scaling the initial system that only provided basic properties. I also utilized a Scriptable Object system aiming to preserve the OCP principle as requested by the pattern and to keep the option to create new objects and scale the functionalities open to other developers and product owners.
+
+<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/a22f8439-c4a9-45f4-9eae-120165d5eb52" align="center" width="700" height="392"/> 
+<img src="https://github.com/Naandoo/DesignPatternsExamples/assets/97987565/53549f80-2cd2-4da6-a768-1058c786db92" align="center" width="700" height="392"/> 
