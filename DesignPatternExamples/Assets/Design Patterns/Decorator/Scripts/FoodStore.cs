@@ -33,7 +33,7 @@ namespace Decorator
 
         private void CheckFoodAvailability()
         {
-            _foodGUI.ToggleObjectInteraction(value: Food.CheckAvailability(_moneyAmount.Value));
+            _foodGUI.ToggleObjectInteraction(value: Food.CheckAvailability(coinAmount: _moneyAmount.Value));
         }
 
         public void OnPointerDown(PointerEventData eventData)
@@ -44,11 +44,8 @@ namespace Decorator
 
         public void OnFoodButtonClicked()
         {
-            if (Food.CheckAvailability(_moneyAmount.Value))
-            {
-                _moneyAmount.Value -= (int)Food.Cost;
-                _inventory.InventoryAdd(Food);
-            }
+            _moneyAmount.Value -= (int)Food.Cost;
+            _inventory.InventoryAdd(Food);
         }
     }
 }

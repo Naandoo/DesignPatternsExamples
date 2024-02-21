@@ -10,6 +10,7 @@ namespace Decorator
 
         public override Sprite Icon { get => _icon; set => _icon = value; }
         public override int Cost { get => _cost; set => _cost = value; }
+
         public override InventoryObject InventoryObject { get; set; }
     }
 }
