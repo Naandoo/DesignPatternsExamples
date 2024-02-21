@@ -1,0 +1,3 @@
+These masks can be used in Photoshop or any photo editing software to create your own colors or make your own adjustments to the existing textures.
+
+When you purchase the complete collection, you will have access to the Ultimate Spaceships Creator Bonus files pack which contains masks, 4k textures and Substance 3D Painter files. (Substance 3D Painter is an external paid software not related to Unity)
