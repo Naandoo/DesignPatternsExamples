@@ -9,9 +9,9 @@ namespace Builder
         [SerializeField] private Image _attackFillBar;
         [SerializeField] private Image _speedFillBar;
         [SerializeField] private AirshipBuilder _airshipBuilder;
-        [SerializeField] Toggle _ToggleLeftWeapon;
+        [SerializeField] private Toggle _ToggleLeftWeapon;
         [SerializeField] private Image _leftWeaponToggleCheck;
-        [SerializeField] Toggle _ToggleRightWeapon;
+        [SerializeField] private Toggle _ToggleRightWeapon;
         [SerializeField] private Image _rightWeaponToggleCheck;
         [SerializeField] private GameObject _completedAirshipMessage;
         private Vector3 _completedAirshipMessageInitialPosition;
@@ -65,14 +65,14 @@ namespace Builder
 
         private void CheckLeftWeapon()
         {
-            _ToggleLeftWeapon.interactable = _airshipBuilder.hasLeftWing;
-            FixToggleOnWeaponAvailability(_leftWeaponToggleCheck, _airshipBuilder.hasLeftWing, _ToggleLeftWeapon);
+            _ToggleLeftWeapon.interactable = _airshipBuilder.HasLeftWing;
+            FixToggleOnWeaponAvailability(_leftWeaponToggleCheck, _airshipBuilder.HasLeftWing, _ToggleLeftWeapon);
         }
 
         private void CheckRightWeapon()
         {
-            _ToggleRightWeapon.interactable = _airshipBuilder.hasRightWing;
-            FixToggleOnWeaponAvailability(_rightWeaponToggleCheck, _airshipBuilder.hasRightWing, _ToggleRightWeapon);
+            _ToggleRightWeapon.interactable = _airshipBuilder.HasRightWing;
+            FixToggleOnWeaponAvailability(_rightWeaponToggleCheck, _airshipBuilder.HasRightWing, _ToggleRightWeapon);
         }
 
         private void FixToggleOnWeaponAvailability(Image toggleCheck, bool state, Toggle toggle)

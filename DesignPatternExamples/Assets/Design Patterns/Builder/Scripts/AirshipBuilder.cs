@@ -16,8 +16,11 @@ namespace Builder
         [SerializeField] private UnityEvent _OnAirshipDamageChanged;
         [SerializeField] private UnityEvent _OnAirshipSpeedChanged;
         [SerializeField] private UnityEvent _onAirshipCompleted;
-        [NonSerialized] public bool hasLeftWing;
-        [NonSerialized] public bool hasRightWing;
+
+        private bool _hasLeftWing;
+        private bool _hasRightWing;
+        public bool HasLeftWing { get => _hasLeftWing; }
+        public bool HasRightWing { get => _hasRightWing; }
 
         private AirshipWeapon _airshipWeapon = new();
         private AirshipWing _airshipWing = new();
@@ -28,25 +31,22 @@ namespace Builder
 
 
         public void OnAirshipCompleted() => _onAirshipCompleted.Invoke();
-
         public void SetFrontalWeaponActive(bool state) => ToggleAirshipModule(_airshipWeapon, state, _frontalWeapon);
-
         public void SetLeftWeaponActive(bool state) => ToggleAirshipModule(_airshipWeapon, state, _leftWeapon);
-
         public void SetRightWeaponActive(bool state) => ToggleAirshipModule(_airshipWeapon, state, _rightWeapon);
 
         public void SetLeftWingActive(bool state)
         {
-            hasLeftWing = state;
+            _hasLeftWing = state;
             ToggleAirshipModule(_airshipWing, state, _leftWing);
-            if (!hasLeftWing) DeactivateAirshipModule(_airshipWeapon, _leftWeapon);
+            if (!_hasLeftWing) DeactivateAirshipModule(_airshipWeapon, _leftWeapon);
         }
 
         public void SetRightWingActive(bool state)
         {
-            hasRightWing = state;
+            _hasRightWing = state;
             ToggleAirshipModule(_airshipWing, state, _rightWing);
-            if (!hasRightWing) DeactivateAirshipModule(_airshipWeapon, _rightWeapon);
+            if (!_hasRightWing) DeactivateAirshipModule(_airshipWeapon, _rightWeapon);
         }
 
         private void ToggleAirshipModule(IAirshipModule airshipModule, bool value, GameObject moduleGameObject)
@@ -54,7 +54,7 @@ namespace Builder
             if (value) ActivateAirshipModule(airshipModule, moduleGameObject);
             else DeactivateAirshipModule(airshipModule, moduleGameObject);
 
-            UpdateStatus(airshipModule, value);
+            UpdateStatus(airshipModule);
         }
 
         private void ActivateAirshipModule(IAirshipModule airshipModule, GameObject moduleGameObject)
@@ -72,7 +72,7 @@ namespace Builder
             }
         }
 
-        private void UpdateStatus(IAirshipModule airshipModule, bool value)
+        private void UpdateStatus(IAirshipModule airshipModule)
         {
             switch (airshipModule.airshipModule)
             {
