@@ -2,17 +2,20 @@
 > This project still in development, feel free to add suggestions and feedbacks.
 
 - Patterns
-  - [Strategy](#strategy)
-  - [Chain of Responsibility](#chain-of-responsibility)
-  - [Singleton](#singleton)
-  - [Factory](#factory)
-  - [Abstract Factory](#abstract-factory)
-  - [Builder](#builder)
-  - [Prototype](#prototype)
-  - [Adapter](#adapter)
-  - [Bridge](#bridge)
-  - [Composite](#composite)
-  - [Decorator](#decorator)
+  - Creational Patterns
+    - [Factory](#factory)
+    - [Abstract Factory](#abstract-factory)
+    - [Builder](#builder)
+    - [Prototype](#prototype)
+    - [Singleton](#singleton)
+  - Structural Patterns
+    - [Adapter](#adapter)
+    - [Bridge](#bridge)
+    - [Composite](#composite)
+    - [Decorator](#decorator)
+  - Behavioral Patterns
+    - [Strategy](#strategy)
+    - [Chain of Responsibility](#chain-of-responsibility)
   
 ## [Strategy](https://refactoring.guru/pt-br/design-patterns/strategy)
 
