@@ -1,6 +1,19 @@
 > [!IMPORTANT]
 > This project still in development, feel free to add suggestions and feedbacks.
 
+- Patterns
+  - [Strategy](#strategy)
+  - [Chain of Responsibility](#chain-of-responsibility)
+  - [Singleton](#singleton)
+  - [Factory](#factory)
+  - [Abstract Factory](#abstract-factory)
+  - [Builder](#builder)
+  - [Prototype](#prototype)
+  - [Adapter](#adapter)
+  - [Bridge](#bridge)
+  - [Composite](#composite)
+  - [Decorator](#decorator)
+  
 ## [Strategy](https://refactoring.guru/pt-br/design-patterns/strategy)
 
 - The strategy pattern provides a solution for algorithms that may expand with the increasing number of systems they handle. It allows the selection of a strategy based on the current needs, isolating each strategy in its own class to eliminate nested code effectively.
