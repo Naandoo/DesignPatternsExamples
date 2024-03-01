@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f44c1578be29040a389d0ae62328b1, type: 3}
+  m_Name: Store
+  m_EditorClassIdentifier: 
+  _currentCoins: {fileID: 11400000, guid: 1e0d3e8a592cd464eab4b93d1cf211f4, type: 2}
+  _currentAmountOfChests: {fileID: 11400000, guid: 3a6119c2994a2244c861fe0e7aa4be3b, type: 2}
+  _currentStrengthAmount: {fileID: 11400000, guid: 9037b78a47098a94ca5db78d357e7009, type: 2}
+  _currentSpeedAmount: {fileID: 11400000, guid: e0fb9718e4584c043bb32fc2e658c5d7, type: 2}
+  _currentHealthAmount: {fileID: 11400000, guid: 3fd022882f8327442b3c1fffdb9cf6e6, type: 2}
+  _currentShieldAmount: {fileID: 11400000, guid: 30de5fd3ded51e245876541f47cc716a, type: 2}
+  _upgradeStatusCost: {fileID: 11400000, guid: 3864b9f172904d345a7bd68b48611daf, type: 2}
+  _chestCost: {fileID: 11400000, guid: 60e5245ff8965a94cb975d2c5942cef2, type: 2}
