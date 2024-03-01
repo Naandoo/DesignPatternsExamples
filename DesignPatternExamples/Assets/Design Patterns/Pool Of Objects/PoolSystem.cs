@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class PoolSystem<T> where T : Object
+public class PoolSystem<T> : IPoolSystem<T> where T : Object
 {
     private readonly Queue<T> _pool = new();
     private readonly T _prefab;

@@ -2,7 +2,7 @@ namespace Builder
 {
     public class AirshipWeapon : IAirshipModule
     {
-        public AirshipModuleType airshipModule { get => AirshipModuleType.Weapon; }
-        public float attributeBonus { get => 30; }
+        public AirshipModuleType airshipModule => AirshipModuleType.Weapon;
+        public float attributeBonus => 30;
     }
 }
