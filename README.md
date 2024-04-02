@@ -1,6 +1,3 @@
-> [!IMPORTANT]
-> This project still in development, feel free to add suggestions and feedbacks.
-
 - Patterns
   - Creational Patterns
     - [Factory](#factory)
